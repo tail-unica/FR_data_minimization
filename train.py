@@ -29,10 +29,6 @@ def main(args):
     world_size = dist.get_world_size()
     auth_ids = int(args.auth_id)
     synth_ids = int(args.synth_id)
-    mixstyle = args.mixstyle
-    randaugment = args.randaugment
-    randaugall = args.randaugall
-    fiqa = args.fiqa
 
     randaugment = False if randaugall else randaugment
 
