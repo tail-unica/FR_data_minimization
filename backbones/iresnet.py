@@ -140,7 +140,6 @@ class IResNet(nn.Module):
         self.features = nn.BatchNorm1d(num_features, eps=1e-05)
         nn.init.constant_(self.features.weight, 1.0)
         self.features.weight.requires_grad = False
-        self.expand_id = nn.Linear(256, num_features)
 
 
         for m in self.modules():

@@ -84,7 +84,6 @@ class MXFaceDataset(Dataset):
              transforms.ToTensor(),
              transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
              ])
-        self.transform_aug = transforms.Compose(aug_rand_4_16)
         self.root_dir = root_dir
         self.local_rank = local_rank
         path_imgrec = os.path.join(root_dir, 'train.rec')
@@ -116,7 +115,7 @@ class MXFaceDataset(Dataset):
 
 
 class FaceDatasetFolder(Dataset):
-    def __init__(self, root_dir, local_rank, root2=None, synth_ids=10000, auth_ids=1000, fiqa_sampling=False, randaugment=False, randaugall=False):
+    def __init__(self, root_dir, local_rank, root2=None, synth_ids=10000, auth_ids=10000, shuffle=False):
         super(FaceDatasetFolder, self).__init__()
         self.transform = transforms.Compose(
             [
@@ -125,12 +124,9 @@ class FaceDatasetFolder(Dataset):
              transforms.ToTensor(),
              transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
              ])
-        #self.transform_aug = transforms.Compose(aug_rand_4_16)
+        self.shuffle = shuffle
         self.root_dir = root_dir
         self.root_dir2 = root2
-        self.fiqa = fiqa_sampling
-        self.randaug = randaugment
-        self.randaugall = randaugall
         self.local_rank = local_rank
         self.imgidx, self.labels, self.num_ids, self.is_synth = self.scan(root_dir, root2, synth_ids=synth_ids, auth_ids=auth_ids)
 
@@ -139,8 +135,13 @@ class FaceDatasetFolder(Dataset):
         labels = []
         is_synth = []
         lb = -1
+
         list_dir = os.listdir(root_syn)
-        list_dir.sort()
+
+        if self.shuffle:
+            random.shuffle(list_dir)
+        else:
+            list_dir.sort()
         for l in list_dir[:synth_ids]:
             images = os.listdir(os.path.join(root_syn, l))
             lb += 1
@@ -148,8 +149,15 @@ class FaceDatasetFolder(Dataset):
                 imgidex.append(os.path.join(l, img))
                 labels.append(lb)
                 is_synth.append(True)
+
+
         list_dir2 = os.listdir(root_auth)
-        list_dir2.sort()
+
+        if self.shuffle:
+            random.shuffle(list_dir2)
+        else:
+            list_dir2.sort()
+
         syn = lb
 
         authentics = list_dir2[:auth_ids]
@@ -174,14 +182,6 @@ class FaceDatasetFolder(Dataset):
         label = torch.tensor(label, dtype=torch.long)
         sample = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         sample = self.transform(sample)
-        '''
-        if self.transform_aug is not None and self.randaugall:
-            sample = self.transform_aug(sample)
-        elif (self.transform is not None and not self.is_synth[index]) or (self.transform is not None and not self.randaug):
-            sample = self.transform(sample)
-        elif self.transform_aug is not None and self.is_synth[index] and self.randaug:
-            sample = self.transform_aug(sample)
-        '''
         return index, sample, label
 
     def __len__(self):

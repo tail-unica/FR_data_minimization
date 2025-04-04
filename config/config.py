@@ -2,12 +2,13 @@ from easydict import EasyDict as edict
 
 config = edict()
 config.dataset = "webface"  # training dataset
+config.synt_dataset = "GC"  # training dataset
 config.embedding_size = 512  # embedding size of model
 config.momentum = 0.9
 config.weight_decay = 5e-4
-config.batch_size = 256  # batch size per GPU
+config.batch_size = 128  # batch size per GPU
 config.lr = 0.1
-config.output = "output/JournalEXT"  # train model output folder
+config.output = "output/"  # train model output folder
 config.global_step = 0  # step to resume
 config.s = 64.0
 config.m = 0.35
@@ -42,11 +43,17 @@ elif config.loss == "ArcFace":
 # "/home/unica/datasets/FaceRecognition/Synthetic/dcface_0.5m_oversample_xid/images"
 # "/home/unica/datasets/FaceRecognition/Synthetic/GAN_Control_class_images/images"
 # "/home/unica/datasets/FaceRecognition/Synthetic/Idifface"
-config.synthetic_root = "/home/aatzori/codebase/ExFaceGAN/new_dataset_small/images"
+
+config.synt_dict = {
+    "GC": "/data/Synthetic/GAN_Control_class_images/images",
+    "DC": "/data/Synthetic/dcface_0.5m_oversample_xid/images",
+    "IDF": "/data/Synthetic/Idifface"
+}
+config.synthetic_root = config.synt_dict[config.synt_dataset]
 
 
-config.val_root = "/home/unica/datasets/FaceRecognition/FR_Benchmark"
-config.network = "iresnet50"
+config.val_root = "/data/FR_Benchmark"
+config.network = "iresnet34"
 config.SE = False  # SEModule
 
 if config.dataset == "emoreIresNet":
@@ -69,7 +76,7 @@ if config.dataset == "emoreIresNet":
     config.lr_func = lr_step_func
 
 elif config.dataset == "webface":
-    config.rec = "/home/unica/datasets/FaceRecognition/casia_training"
+    config.rec = "/data/Authentic/casia_training"
     config.num_classes = 10572
     config.num_image = 501195
     config.num_epoch = 40  # [22, 30, 35]

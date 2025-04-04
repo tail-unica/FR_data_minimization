@@ -17,7 +17,7 @@ from utils.dataset import MXFaceDataset, DataLoaderX, FaceDatasetFolder
 from utils.utils_callbacks import CallBackVerification, CallBackLogging, CallBackModelCheckpoint
 from utils.utils_logging import AverageMeter, init_logging
 
-from backbones.iresnet import iresnet100, iresnet50, iresnet18
+from backbones.iresnet import iresnet100, iresnet50, iresnet18, iresnet34
 
 torch.backends.cudnn.benchmark = True
 
@@ -29,15 +29,14 @@ def main(args):
     world_size = dist.get_world_size()
     auth_ids = int(args.auth_id)
     synth_ids = int(args.synth_id)
-
-    randaugment = False if randaugall else randaugment
+    experiment = args.experiment
+    cfg.synt_dataset = args.synth_ds
+    iteration = args.iter
 
     train_kind = ""
-    train_kind = train_kind+"_MixStyle" if mixstyle else train_kind
-    train_kind = train_kind+"_RandAug" if randaugment else train_kind
-    train_kind = train_kind+"_FIQA" if fiqa else train_kind
-    train_kind = train_kind+"_RandAug(ALL)" if randaugall else train_kind
-    cfg.output = f"output/JournalEXT/BIAS/R50_CosFace_Balanced_GC_{synth_ids//1000}K_{auth_ids//1000}K{train_kind}_{cfg.dataset}"
+    cfg.output = f"output/{experiment}/R50_CosFace_{cfg.synt_dataset}_{synth_ids//1000}K_{auth_ids//1000}K{train_kind}_{cfg.dataset}"
+    if iteration != -1:
+        cfg.output += f"/{iteration}"
 
     global_step = cfg.global_step
     if not os.path.exists(cfg.output) and rank==0:
@@ -54,9 +53,8 @@ def main(args):
     log_root = logging.getLogger()
     init_logging(log_root, rank, cfg.output)
 
-    #trainset = MXFaceDataset(root_dir=cfg.rec, local_rank=local_rank)
-    trainset = FaceDatasetFolder(root_dir=cfg.synthetic_root, local_rank=local_rank, root2=cfg.rec, synth_ids=synth_ids, auth_ids=auth_ids, fiqa_sampling=fiqa, randaugment=randaugment, randaugall=randaugall)
-    #trainset = FaceDatasetFolder(root_dir=cfg.rec, local_rank=local_rank, root2=cfg.rec, auth_ids=0)
+    trainset = FaceDatasetFolder(root_dir=cfg.synthetic_root, local_rank=local_rank, root2=cfg.rec, synth_ids=synth_ids, auth_ids=auth_ids, shuffle=iteration!=-1)
+
     num_ids = trainset.num_ids
     cfg.num_classes = num_ids[0] +1
     cfg.num_image = len(trainset.imgidx)
@@ -77,9 +75,9 @@ def main(args):
     if cfg.network == "iresnet100":
         backbone = iresnet100(num_features=cfg.embedding_size, use_se=cfg.SE).to(local_rank)
     elif cfg.network == "iresnet50":
-        backbone = iresnet50(dropout=0.4,num_features=cfg.embedding_size, use_se=cfg.SE, mixstyle=mixstyle).to(local_rank)
-    elif cfg.network == "iresnet18":
-        backbone = iresnet18(dropout=0.4,num_features=cfg.embedding_size, use_se=cfg.SE, mixstyle=mixstyle).to(local_rank)
+        backbone = iresnet50(dropout=0.4,num_features=cfg.embedding_size, use_se=cfg.SE).to(local_rank)
+    elif cfg.network == "iresnet34":
+        backbone = iresnet34(dropout=0.4,num_features=cfg.embedding_size, use_se=cfg.SE).to(local_rank)
     else:
         backbone = None
         logging.info("load backbone failed!")
@@ -93,7 +91,7 @@ def main(args):
             if rank == 0:
                 logging.info("backbone resume loaded successfully!")
         except (FileNotFoundError, KeyError, IndexError, RuntimeError):
-            logging.info("load backbone resume init, failed!")
+            logging.info(f"load backbone resume init, failed! {global_step}")
 
     for ps in backbone.parameters():
         dist.broadcast(ps, 0)
@@ -220,11 +218,11 @@ if __name__ == "__main__":
     parser.add_argument('--local-rank', type=int, default=0, help='local_rank')
     parser.add_argument('--resume', type=int, default=0, help="resume training")
     parser.add_argument("--auth_id", type=int, default=0, help="authentic identities")
+    parser.add_argument("--iter", type=int, default=-1, help="sampling iteration")
     parser.add_argument("--synth_id", type=int, default=0, help="synthetic identities")
-    parser.add_argument("--mixstyle", type=bool, default=False, help="use MixStyle")
-    parser.add_argument("--randaugment", type=bool, default=False, help="use RandAugment")
-    parser.add_argument("--fiqa", type=bool, default=False, help="use CR-FIQA sampling")
-    parser.add_argument("--randaugall", type=bool, default=False, help="use RandAugment on all images")
+    parser.add_argument("--synth_ds", type=str, default=0, help="synthetic dataset")
+    parser.add_argument("--experiment", type=str, default="", help="experiment")
+    parser.add_argument("--cmt", type=str, default="", help="additional comments")
 
     args_ = parser.parse_args()
     main(args_)

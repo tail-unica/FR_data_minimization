@@ -20,8 +20,7 @@ from config import config as cfg
 from backbones.iresnet import iresnet100, iresnet50, iresnet18
 
 def compute_last_layer_grads(loss_v, backbone, local_rank):
-    last_layer_grads = torch.zeros(size=(loss_v.shape[0],)).cuda(local_rank) 
-    '''crea vettore di zeri di dimensione loss_v, ma non capisco cosa vuol dire .cuda(local_rank) (per usare la gpu?)'''
+    last_layer_grads = torch.zeros(size=(loss_v.shape[0],)).cuda(local_rank)
     for i in range(loss_v.shape[0]):
         g = abs(torch.autograd.grad(loss_v[i], list(backbone.parameters())[-1], retain_graph=True)[0]).mean()
         last_layer_grads[i] = g
@@ -49,25 +48,21 @@ if __name__ == "__main__":
 
     local_rank=f"cuda:{gpu_id}"
 
-    '''inizializza effettivamente un dataset'''
     trainset = FaceDatasetFolder(root_dir=cfg.rec, local_rank=local_rank) 
     num_ids = trainset.num_ids
     cfg.num_classes = num_ids +1
     cfg.num_image = len(trainset.imgidx)
-    
-    '''questa non l'ho capita, è una condizione se non viene usata gpu?'''
+
     if local_rank == 0:
         print(f"Classes: {num_ids+1} real - {cfg.num_image} images - eval: {cfg.eval_step}")
 
-    '''campionamento del dataset'''
+
     train_sampler = torch.utils.data.RandomSampler(trainset)
 
-    '''caricamento del dataset con gruppi di dimenzione batch etc. , prende i sampler creati in precedenza'''
     train_loader = DataLoaderX(
         local_rank=local_rank, dataset=trainset, batch_size=cfg.batch_size,
         sampler=train_sampler, num_workers=0, pin_memory=True, drop_last=True)
 
-    '''perchè usiamo proprio cosface? qual è la differenza con le altre function?'''
     header = losses.CosFace(in_features=cfg.embedding_size, out_features=cfg.num_classes, s=cfg.s, m=cfg.m).to(
             local_rank)
 
@@ -97,8 +92,6 @@ if __name__ == "__main__":
 
     for _, (idx, img, label) in enumerate(train_loader):
 
-        '''creo due vettori per inserire i valori di embeddings e labels
-        con questi parametri(backbones di 512)'''
         embeddings=[] 
         labels=[]
 
