@@ -18,6 +18,7 @@ from utils.utils_callbacks import CallBackVerification, CallBackLogging, CallBac
 from utils.utils_logging import AverageMeter, init_logging
 
 from backbones.iresnet import iresnet100, iresnet50, iresnet18, iresnet34
+from cleanup import clean_folder
 
 torch.backends.cudnn.benchmark = True
 
@@ -210,6 +211,7 @@ def main(args):
 
         callback_checkpoint(global_step, backbone, header)
 
+    clean_folder(cfg.output)
     dist.destroy_process_group()
 
 
