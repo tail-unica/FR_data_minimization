@@ -1,6 +1,7 @@
 import argparse
 import logging
 import os
+import sys
 import time
 
 import torch
@@ -22,6 +23,17 @@ from cleanup import clean_folder
 
 torch.backends.cudnn.benchmark = True
 
+exclude = ["iresnet34_CosFace_GC_2K"]
+
+def format_output_folder(experiment, net, loss, auth_ds, synth_ds, auth_ids, synth_ids):
+    base = cfg.output
+    base += f"{experiment}/"
+    base += f"{net}_"
+    base += f"{loss}_"
+    base += f"{synth_ds}_{synth_ids//1000}K_" if synth_ids > 0 else ""
+    base += f"{auth_ds}_{auth_ids//1000}K_" if auth_ids > 0 else ""
+    return base
+
 def main(args):
     dist.init_process_group(backend='nccl', init_method='env://')
     local_rank = args.local_rank
@@ -31,11 +43,25 @@ def main(args):
     auth_ids = int(args.auth_id)
     synth_ids = int(args.synth_id)
     experiment = args.experiment
+    cfg.auth_dataset = args.auth_ds
     cfg.synt_dataset = args.synth_ds
     iteration = args.iter
 
-    train_kind = ""
-    cfg.output = f"output/{experiment}/R50_CosFace_{cfg.synt_dataset}_{synth_ids//1000}K_{auth_ids//1000}K{train_kind}_{cfg.dataset}"
+    cfg.output = format_output_folder(
+        experiment=experiment,
+        net=cfg.network,
+        loss=cfg.loss,
+        auth_ds=cfg.auth_dataset,
+        synth_ds=cfg.synt_dataset,
+        auth_ids=auth_ids,
+        synth_ids=synth_ids)
+
+    for ex in exclude:
+        if ex in cfg.output:
+            dist.destroy_process_group()
+            sys.exit(1)
+
+
     if iteration != -1:
         cfg.output += f"/{iteration}"
 
@@ -54,7 +80,13 @@ def main(args):
     log_root = logging.getLogger()
     init_logging(log_root, rank, cfg.output)
 
-    trainset = FaceDatasetFolder(root_dir=cfg.synthetic_root, local_rank=local_rank, root2=cfg.rec, synth_ids=synth_ids, auth_ids=auth_ids, shuffle=iteration!=-1)
+    trainset = FaceDatasetFolder(
+        root_dir=cfg.synthetic_root,
+        local_rank=local_rank,
+        root2=cfg.rec,
+        synth_ids=synth_ids,
+        auth_ids=auth_ids,
+        shuffle=iteration!=-1)
 
     num_ids = trainset.num_ids
     cfg.num_classes = num_ids[0] +1
@@ -220,9 +252,10 @@ if __name__ == "__main__":
     parser.add_argument('--local-rank', type=int, default=0, help='local_rank')
     parser.add_argument('--resume', type=int, default=0, help="resume training")
     parser.add_argument("--auth_id", type=int, default=0, help="authentic identities")
+    parser.add_argument("--auth_ds", type=str, default="WF", help="authentic dataset")
     parser.add_argument("--iter", type=int, default=-1, help="sampling iteration")
     parser.add_argument("--synth_id", type=int, default=0, help="synthetic identities")
-    parser.add_argument("--synth_ds", type=str, default=0, help="synthetic dataset")
+    parser.add_argument("--synth_ds", type=str, default="GC", help="synthetic dataset")
     parser.add_argument("--experiment", type=str, default="", help="experiment")
     parser.add_argument("--cmt", type=str, default="", help="additional comments")
 

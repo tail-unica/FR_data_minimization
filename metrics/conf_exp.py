@@ -15,20 +15,20 @@ from utils.utils_callbacks import CallBackVerification
 from utils.utils_logging import init_logging
 from config import config as cfg
 
-from backbones.iresnet import iresnet100, iresnet50, iresnet18
+from backbones.iresnet import iresnet100, iresnet50, iresnet34
 
 gpu_id = 0
 log_root = logging.getLogger()
+output_path = f"{cfg.output}/{cfg.dataset}_classification_confidence.npy"
+softmax = nn.Softmax(dim=1)
 
+print(cfg.network)
 if cfg.network == "iresnet100":
-    print("iresnet100")
     backbone = iresnet100(num_features=512).to(f"cuda:{gpu_id}")
 elif cfg.network == "iresnet50":
-    print("iresnet50")
     backbone = iresnet50(num_features=512).to(f"cuda:{gpu_id}")
-elif cfg.network == "iresnet18":
-    print("iresnet18")
-    backbone = iresnet18(num_features=512).to(f"cuda:{gpu_id}")
+elif cfg.network == "iresnet34":
+    backbone = iresnet34(num_features=512).to(f"cuda:{gpu_id}")
 else:
     backbone = None
     exit()
@@ -52,26 +52,20 @@ train_loader = DataLoaderX(
 header = losses.CosFace(in_features=cfg.embedding_size, out_features=cfg.num_classes, s=cfg.s, m=cfg.m).to(
         local_rank)
 
-weights_bb = "output_IDiffFace500/R18_CosFace_500_webface/1560backbone.pth"
-backbone.load_state_dict(torch.load(weights_bb))
-
-weights_header = "output_IDiffFace500/R18_CosFace_500_webface/1560header.pth"
-header.load_state_dict(torch.load(weights_header))
-
-name_dataset = weights_bb.split('_')[1].split('/')[0]
-#name_dataset="casia500"
-output_path = "criterion_npy"
-header = torch.nn.DataParallel(header, device_ids=[gpu_id])
+backbone.load_state_dict(torch.load(cfg.data_dict[cfg.dataset]["pretrained"]["backbone"]))
 backbone = torch.nn.DataParallel(backbone, device_ids=[gpu_id])
+header.load_state_dict(torch.load(cfg.data_dict[cfg.dataset]["pretrained"]["header"]))
+header = torch.nn.DataParallel(header, device_ids=[gpu_id])
 
-softmax = nn.Softmax(dim=1)
+
+
 
 backbone.eval()
 header.eval()
 
 class_confidences = {}
 
-with torch.no_grad():  # per non considerare i gradienti
+with torch.no_grad():
     for _, (idx, img, label) in enumerate(train_loader):
         img = img.cuda(local_rank, non_blocking=True)
         label = label.cuda(local_rank, non_blocking=True)
