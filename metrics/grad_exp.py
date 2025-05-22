@@ -6,7 +6,8 @@ import sys
 import torch
 import torch.nn.functional as F
 import torch.nn as nn
-import numpy as np 
+import numpy as np
+from torch.nn import CrossEntropyLoss
 from tqdm import tqdm
 
 sys.path.append("../")
@@ -21,14 +22,23 @@ gpu_id = 0
 log_root = logging.getLogger()
 
 
+def compute_last_layer_grads(loss_v, backbone, local_rank):
+    last_layer_grads = torch.zeros(size=(loss_v.shape[0],)).cuda(local_rank)
+    for i in range(loss_v.shape[0]):
+        g = abs(torch.autograd.grad(loss_v[i], list(backbone.parameters())[-1], retain_graph=True)[0]).mean()
+        last_layer_grads[i] = g
+        backbone.zero_grad()
+    return last_layer_grads
 
+
+criterion = CrossEntropyLoss(reduction="none")
 
 for dataset in cfg.data_dict.keys():
 
     print(f"Inferencing {dataset}: \n data: {cfg.data_dict[dataset]['data']} \n pretrained: {cfg.data_dict[dataset]['pretrained']['backbone']}")
 
     base_putpath = f"data2/{dataset}/"
-    output_path = f"data2/{dataset}/confidence.pkl"
+    output_path = f"data2/{dataset}/gradient_magnitude.pkl"
     if os.path.exists(output_path):
         print(f"Skipping {dataset}: already exists")
     else:
@@ -73,40 +83,43 @@ for dataset in cfg.data_dict.keys():
         backbone.eval()
         header.eval()
 
-        class_confidences = {}
+        gradient_magnitudes = {}
         progress_bar = tqdm(total=len(train_loader))
-        with torch.no_grad():
-            for _, (idx, img, label, folder_name) in enumerate(train_loader):
-                #print(folder_name)
-                img = img.cuda(local_rank, non_blocking=True)
-                label = label.cuda(local_rank, non_blocking=True)
 
-                features = F.normalize(backbone(img))
 
-                # distribuzione delle probabilità di tutte le classi
-                thetas = header(features, label)
-                output = thetas[torch.arange(thetas.size(0)).unsqueeze(1), label.view(-1, 1)]
-                output /= cfg.s
-                output.acos_()
-                output += cfg.m
-                output.cos_()
+        for _, (idx, img, label, folder_name) in enumerate(train_loader):
+            #print(folder_name)
+            img = img.cuda(local_rank, non_blocking=True)
+            img.requires_grad = True
+            label = label.cuda(local_rank, non_blocking=True)
 
-                for i in range(output.size(0)):
-                    class_id = ''.join([chr(c.item()) for c in folder_name[i] if c != PAD_CHAR])#label[i].item()
-                    confidence = output[i].item()
-                    if class_id not in class_confidences:
-                        class_confidences[class_id] = []
-                    class_confidences[class_id].append(confidence)
+            features = F.normalize(backbone(img))
 
-                progress_bar.update(1)
+            # distribuzione delle probabilità di tutte le classi
+            thetas = header(features, label)
+            loss_v = criterion(thetas, label)
+            loss_v.mean().backward()
+            grads = img.grad.mean(dim=(1, 2, 3)).abs()
+
+
+            output = grads.cpu().numpy()
+
+            for i in range(len(output)):
+                class_id = ''.join([chr(c.item()) for c in folder_name[i] if c != PAD_CHAR])#label[i].item()
+                gr_MAG = output[i].item()
+                if class_id not in gradient_magnitudes:
+                    gradient_magnitudes[class_id] = []
+                gradient_magnitudes[class_id].append(gr_MAG)
+
+            progress_bar.update(1)
 
         # Calcola la media delle confidenze per ogni classe
-        mean_confidences = {class_id: np.mean(confidences) for class_id, confidences in class_confidences.items()}
+        mean_magnitudes = {class_id: np.mean(grad_mag) for class_id, grad_mag in gradient_magnitudes.items()}
 
         #cls = np.asarray(list(mean_confidences.keys()))
         #cnf = np.asarray(list(mean_confidences.values()))
         #to_save = np.hstack([cls.reshape(-1, 1), cnf.reshape(-1, 1)])
-        to_save = (list(mean_confidences.keys()), list(mean_confidences.values()))
+        to_save = (list(mean_magnitudes.keys()), list(mean_magnitudes.values()))
 
         os.makedirs(base_putpath, exist_ok=True)
         with open(output_path, 'wb') as fp:

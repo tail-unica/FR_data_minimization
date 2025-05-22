@@ -1,6 +1,8 @@
 import collections
+import copy
 import numbers
 import os
+import pickle
 import queue as Queue
 import threading
 import random
@@ -11,11 +13,8 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms
 import cv2
 
+#from metrics.gradient_exp import criterion
 
-
-
-
-    
 
 class BackgroundGenerator(threading.Thread):
     def __init__(self, generator, local_rank, max_prefetch=6):
@@ -115,7 +114,7 @@ class MXFaceDataset(Dataset):
 
 
 class FaceDatasetFolder(Dataset):
-    def __init__(self, root_dir, local_rank, root2=None, synth_ids=10000, auth_ids=10000, shuffle=False):
+    def __init__(self, root_dir, local_rank, root2=None, synth_ids=10000, auth_ids=10000, shuffle=False, criterion=None):
         super(FaceDatasetFolder, self).__init__()
         self.transform = transforms.Compose(
             [
@@ -124,52 +123,72 @@ class FaceDatasetFolder(Dataset):
              transforms.ToTensor(),
              transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
              ])
+        self.criterion = criterion
         self.shuffle = shuffle
         self.root_dir = root_dir
         self.root_dir2 = root2
         self.local_rank = local_rank
-        self.imgidx, self.labels, self.num_ids, self.is_synth = self.scan(root_dir, root2, synth_ids=synth_ids, auth_ids=auth_ids)
+        self.imgidx, self.labels, self.num_ids, self.is_synth, self.fld_name = self.scan(root_dir, root2, synth_ids=synth_ids, auth_ids=auth_ids)
 
     def scan(self, root_syn, root_auth, synth_ids, auth_ids):
         imgidex = []
         labels = []
         is_synth = []
+        fld_name = []
         lb = -1
+        indexes = None
 
-        list_dir = os.listdir(root_syn)
-
-        if self.shuffle:
-            random.shuffle(list_dir)
-        else:
-            list_dir.sort()
-        for l in list_dir[:synth_ids]:
-            images = os.listdir(os.path.join(root_syn, l))
-            lb += 1
-            for img in images:
-                imgidex.append(os.path.join(l, img))
-                labels.append(lb)
-                is_synth.append(True)
+        if self.criterion:
+            data, kind = self.criterion[0], self.criterion[1]
+            #print(self.criterion)
+            classes, values = data[0], data[1]
+            indexes = np.argsort(values)
+            indexes = indexes[::-1] if kind == 'descending' else indexes
 
 
-        list_dir2 = os.listdir(root_auth)
+        if root_syn is not None:
+            list_dir = os.listdir(root_syn)
 
-        if self.shuffle:
-            random.shuffle(list_dir2)
-        else:
-            list_dir2.sort()
+            if self.shuffle:
+                random.shuffle(list_dir)
+            elif self.criterion:
+                list_dir = [classes[k] for k in indexes]
+            else:
+                list_dir.sort()
+
+
+            for l in list_dir[:synth_ids]:
+                images = os.listdir(os.path.join(root_syn, l))
+                lb += 1
+                for img in images:
+                    imgidex.append(os.path.join(l, img))
+                    labels.append(lb)
+                    fld_name.append(l)
+                    is_synth.append(True)
+
 
         syn = lb
+        if root_auth is not None:
+            list_dir2 = os.listdir(root_auth)
 
-        authentics = list_dir2[:auth_ids]
-        for l in authentics:
-            images = os.listdir(os.path.join(root_auth, l))
-            lb += 1
-            for img in images:
-                imgidex.append(os.path.join(l, img))
-                labels.append(lb)
-                is_synth.append(False)
+            if self.shuffle:
+                random.shuffle(list_dir2)
+            elif self.criterion:
+                list_dir2 = [classes[k] for k in indexes]
+            else:
+                list_dir2.sort()
 
-        return imgidex, labels, [lb, lb - syn], is_synth
+            authentics = list_dir2[:auth_ids]
+            for l in authentics:
+                images = os.listdir(os.path.join(root_auth, l))
+                lb += 1
+                for img in images:
+                    imgidex.append(os.path.join(l, img))
+                    labels.append(lb)
+                    fld_name.append(l)
+                    is_synth.append(False)
+
+        return imgidex, labels, [lb, lb - syn], is_synth, fld_name
 
     def readImage(self, path, issyn):
         rt = self.root_dir if issyn else self.root_dir2
@@ -177,12 +196,18 @@ class FaceDatasetFolder(Dataset):
 
     def __getitem__(self, index):
         path = self.imgidx[index]
+        fld_name = self.fld_name[index]
+        lnt = len(fld_name)
+        if lnt < 7:
+            pad = "_" * (7 - lnt)
+            fld_name += pad
+        fld_name = torch.tensor([ord(c) for c in fld_name], dtype=torch.int32)
         img = self.readImage(path, self.is_synth[index])
         label = self.labels[index]
         label = torch.tensor(label, dtype=torch.long)
         sample = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         sample = self.transform(sample)
-        return index, sample, label
+        return index, sample, label, fld_name
 
     def __len__(self):
         return len(self.imgidx)

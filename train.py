@@ -4,6 +4,7 @@ import os
 import sys
 import time
 
+import numpy as np
 import torch
 import torch.distributed as dist
 import torch.nn.functional as F
@@ -23,16 +24,26 @@ from cleanup import clean_folder
 
 torch.backends.cudnn.benchmark = True
 
-exclude = ["iresnet34_CosFace_GC_2K"]
 
-def format_output_folder(experiment, net, loss, auth_ds, synth_ds, auth_ids, synth_ids):
+
+def format_output_folder(experiment, net, loss, auth_ds, synth_ds, auth_ids, synth_ids, cmt=""):
     base = cfg.output
     base += f"{experiment}/"
     base += f"{net}_"
     base += f"{loss}_"
     base += f"{synth_ds}_{synth_ids//1000}K_" if synth_ids > 0 else ""
     base += f"{auth_ds}_{auth_ids//1000}K_" if auth_ids > 0 else ""
+    base += f"/{cmt}_" if cmt != "" else ""
     return base
+
+
+def get_exp_config(experiment, cmt, dataset):
+    if experiment in ["baseline", "reference"]:
+        return None
+    data_path = os.path.join(f"metrics/data2/{dataset}", f"{experiment}.pkl")
+    data = np.load(data_path, allow_pickle=True)
+    print(f"Using {dataset}: Sorting via {experiment} in {cmt} ording")
+    return (data, cmt)
 
 def main(args):
     dist.init_process_group(backend='nccl', init_method='env://')
@@ -45,7 +56,13 @@ def main(args):
     experiment = args.experiment
     cfg.auth_dataset = args.auth_ds
     cfg.synt_dataset = args.synth_ds
+    cfg.synthetic_root = cfg.synt_dict[cfg.synt_dataset]
+    cfg.rec = cfg.auth_dict[cfg.auth_dataset]
     iteration = args.iter
+    cmt = args.cmt
+
+    if args.synth_ds == "DC" and synth_ids == 2000 and cmt == "descending":
+        sys.exit(1)
 
     cfg.output = format_output_folder(
         experiment=experiment,
@@ -54,13 +71,15 @@ def main(args):
         auth_ds=cfg.auth_dataset,
         synth_ds=cfg.synt_dataset,
         auth_ids=auth_ids,
-        synth_ids=synth_ids)
+        synth_ids=synth_ids,
+        cmt=cmt
+    )
 
-    for ex in exclude:
-        if ex in cfg.output:
-            dist.destroy_process_group()
-            sys.exit(1)
-
+    experimental_config = get_exp_config(
+        experiment=experiment,
+        cmt=cmt,
+        dataset=cfg.auth_dataset if auth_ids > 0 else cfg.synt_dataset
+    )
 
     if iteration != -1:
         cfg.output += f"/{iteration}"
@@ -79,6 +98,8 @@ def main(args):
 
     log_root = logging.getLogger()
     init_logging(log_root, rank, cfg.output)
+    
+    logging.info(f"Dataset: {cfg.synthetic_root}")
 
     trainset = FaceDatasetFolder(
         root_dir=cfg.synthetic_root,
@@ -86,7 +107,9 @@ def main(args):
         root2=cfg.rec,
         synth_ids=synth_ids,
         auth_ids=auth_ids,
-        shuffle=iteration!=-1)
+        shuffle=iteration!=-1,
+        criterion=experimental_config
+    )
 
     num_ids = trainset.num_ids
     cfg.num_classes = num_ids[0] +1
@@ -214,7 +237,7 @@ def main(args):
     global_step = global_step
     for epoch in range(start_epoch, cfg.num_epoch):
         train_sampler.set_epoch(epoch)
-        for _, (idx, img, label) in enumerate(train_loader):
+        for _, (idx, img, label, fn) in enumerate(train_loader):
             global_step += 1
             img = img.cuda(local_rank, non_blocking=True)
             label = label.cuda(local_rank, non_blocking=True)
@@ -249,7 +272,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='PyTorch margin penalty loss training')
-    parser.add_argument('--local-rank', type=int, default=0, help='local_rank')
+    parser.add_argument('--local_rank', type=int, default=0, help='local_rank')
     parser.add_argument('--resume', type=int, default=0, help="resume training")
     parser.add_argument("--auth_id", type=int, default=0, help="authentic identities")
     parser.add_argument("--auth_ds", type=str, default="WF", help="authentic dataset")

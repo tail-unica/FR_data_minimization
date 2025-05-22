@@ -38,32 +38,32 @@ elif config.loss == "ArcFace":
 config.data_dict = {
     "GC": {"data": "/data/Synthetic/GAN_Control_class_images/images",
            "pretrained": {
-               "backbone": "",
-               "header": ""
+               "backbone": "../output/reference/iresnet34_CosFace_GC_10K_/187480backbone.pth",
+               "header": "../output/reference/iresnet34_CosFace_GC_10K_/187480header.pth"
            }
            },
     "DC": {"data": "/data/Synthetic/dcface_0.5m_oversample_xid/images",
            "pretrained": {
-               "backbone": "",
-               "header": ""
+               "backbone": "../output/reference/iresnet34_CosFace_DC_10K_/171840backbone.pth",
+               "header": "../output/reference/iresnet34_CosFace_DC_10K_/171840header.pth",
            }
            },
     "IDF": {"data": "/data/Synthetic/Idifface",
             "pretrained": {
-               "backbone": "",
-               "header": ""
+               "backbone": "../output/reference/iresnet34_CosFace_IDF_10K_/156240backbone.pth",
+               "header": "../output/reference/iresnet34_CosFace_IDF_10K_/156240header.pth",
             }
             },
     "WF": {"data": "/data/Authentic/casia_training",
            "pretrained": {
-               "backbone": "",
-               "header": ""
+               "backbone": "../output/reference/iresnet34_CosFace_WF_10K_/148320backbone.pth",
+               "header": "../output/reference/iresnet34_CosFace_WF_10K_/148320header.pth",
            }
            },
     "M2-S": {"data": "/data/Authentic/faces_emore_10k/images",
              "pretrained":{
-               "backbone": "",
-               "header": ""
+               "backbone": "../output/reference/iresnet34_CosFace_M2-S_10K_/236920backbone.pth",
+               "header": "../output/reference/iresnet34_CosFace_M2-S_10K_/236920header.pth",
              }
              },
 }
