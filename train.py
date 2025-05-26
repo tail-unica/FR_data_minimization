@@ -42,7 +42,7 @@ def get_exp_config(experiment, cmt, dataset):
         return None
     data_path = os.path.join(f"metrics/data2/{dataset}", f"{experiment}.pkl")
     data = np.load(data_path, allow_pickle=True)
-    print(f"Using {dataset}: Sorting via {experiment} in {cmt} ording")
+    print(f"Using {dataset}: Sorting via {experiment} in {cmt} order")
     return (data, cmt)
 
 def main(args):
@@ -61,8 +61,7 @@ def main(args):
     iteration = args.iter
     cmt = args.cmt
 
-    if args.synth_ds == "DC" and synth_ids == 2000 and cmt == "descending":
-        sys.exit(1)
+
 
     cfg.output = format_output_folder(
         experiment=experiment,
@@ -98,8 +97,10 @@ def main(args):
 
     log_root = logging.getLogger()
     init_logging(log_root, rank, cfg.output)
-    
-    logging.info(f"Dataset: {cfg.synthetic_root}")
+
+
+
+    logging.info(f"Dataset: {cfg.synthetic_root if synth_ids > 0 else cfg.rec}")
 
     trainset = FaceDatasetFolder(
         root_dir=cfg.synthetic_root,
@@ -231,8 +232,6 @@ def main(args):
     callback_verification = CallBackVerification(cfg.eval_step, rank, cfg.val_targets, cfg.val_root)
     callback_logging = CallBackLogging(50, rank, total_step, cfg.batch_size, world_size, writer=None)
     callback_checkpoint = CallBackModelCheckpoint(rank, cfg.output)
-    #callback_verification(cfg.eval_step, backbone)
-    #torch.autograd.set_detect_anomaly(True)
     loss = AverageMeter()
     global_step = global_step
     for epoch in range(start_epoch, cfg.num_epoch):
