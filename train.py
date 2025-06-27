@@ -87,6 +87,9 @@ def main(args):
     if not os.path.exists(cfg.output) and rank==0:
         os.makedirs(cfg.output)
     elif os.path.exists(cfg.output):
+        print(f"{cfg.output} already exists, skipping.")
+        sys.exit(0)
+
         content = os.listdir(cfg.output)
         content = [int(c.replace("backbone.pth", "").replace("header.pth", "")) for c in content if c.endswith(".pth")]
         if len(content) > 0:
