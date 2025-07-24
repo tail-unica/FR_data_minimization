@@ -1,0 +1,913 @@
+Training: 2025-05-28 04:47:12,076-rank_id: 0
+Training: 2025-05-28 04:47:12,076-Dataset: /data/Authentic/casia_training
+Training: 2025-05-28 04:47:12,404-Classes: 0 synthetic, 2000 real - 49390 images - eval: 385
+Training: 2025-05-28 04:47:13,371-Total Step is: 15434
+Training: 2025-05-28 04:47:44,981-Reducer buckets have been rebuilt in this iteration.
+Training: 2025-05-28 04:47:45,082-Reducer buckets have been rebuilt in this iteration.
+Training: 2025-05-28 04:48:18,793-Speed 373.26 samples/sec   Loss 34.3908 Epoch: 0   Global Step: 100   Required: 2 hours
+Training: 2025-05-28 04:48:35,993-Speed 372.09 samples/sec   Loss 33.2422 Epoch: 0   Global Step: 150   Required: 2 hours
+Training: 2025-05-28 04:48:53,217-Speed 371.58 samples/sec   Loss 32.4619 Epoch: 0   Global Step: 200   Required: 2 hours
+Training: 2025-05-28 04:49:10,458-Speed 371.21 samples/sec   Loss 31.9116 Epoch: 0   Global Step: 250   Required: 2 hours
+Training: 2025-05-28 04:49:27,705-Speed 371.09 samples/sec   Loss 31.4102 Epoch: 0   Global Step: 300   Required: 1 hours
+Training: 2025-05-28 04:49:44,959-Speed 370.93 samples/sec   Loss 30.8783 Epoch: 0   Global Step: 350   Required: 1 hours
+Training: 2025-05-28 04:50:21,551-[lfw][385]XNorm: 19.398732
+Training: 2025-05-28 04:50:21,551-[lfw][385]Accuracy-Flip: 0.76667+-0.02012
+Training: 2025-05-28 04:50:21,551-[lfw][385]Accuracy-Highest: 0.76667
+Training: 2025-05-28 04:50:49,770-[cfp_fp][385]XNorm: 23.206938
+Training: 2025-05-28 04:50:49,770-[cfp_fp][385]Accuracy-Flip: 0.58671+-0.01294
+Training: 2025-05-28 04:50:49,770-[cfp_fp][385]Accuracy-Highest: 0.58671
+Training: 2025-05-28 04:51:13,962-[agedb_30][385]XNorm: 19.789102
+Training: 2025-05-28 04:51:13,962-[agedb_30][385]Accuracy-Flip: 0.54267+-0.01232
+Training: 2025-05-28 04:51:13,962-[agedb_30][385]Accuracy-Highest: 0.54267
+Training: 2025-05-28 04:51:38,258-[calfw][385]XNorm: 20.958717
+Training: 2025-05-28 04:51:38,258-[calfw][385]Accuracy-Flip: 0.61017+-0.01409
+Training: 2025-05-28 04:51:38,258-[calfw][385]Accuracy-Highest: 0.61017
+Training: 2025-05-28 04:52:02,591-[cplfw][385]XNorm: 19.950366
+Training: 2025-05-28 04:52:02,591-[cplfw][385]Accuracy-Flip: 0.54817+-0.01045
+Training: 2025-05-28 04:52:02,591-[cplfw][385]Accuracy-Highest: 0.54817
+Training: 2025-05-28 04:52:07,932-Speed 44.76 samples/sec   Loss 29.9103 Epoch: 1   Global Step: 400   Required: 3 hours
+Training: 2025-05-28 04:52:25,178-Speed 371.09 samples/sec   Loss 28.0896 Epoch: 1   Global Step: 450   Required: 3 hours
+Training: 2025-05-28 04:52:42,432-Speed 370.94 samples/sec   Loss 28.1230 Epoch: 1   Global Step: 500   Required: 2 hours
+Training: 2025-05-28 04:52:59,688-Speed 370.89 samples/sec   Loss 27.8825 Epoch: 1   Global Step: 550   Required: 2 hours
+Training: 2025-05-28 04:53:16,948-Speed 370.80 samples/sec   Loss 27.7996 Epoch: 1   Global Step: 600   Required: 2 hours
+Training: 2025-05-28 04:53:34,206-Speed 370.83 samples/sec   Loss 27.6581 Epoch: 1   Global Step: 650   Required: 2 hours
+Training: 2025-05-28 04:53:51,468-Speed 370.76 samples/sec   Loss 27.4664 Epoch: 1   Global Step: 700   Required: 2 hours
+Training: 2025-05-28 04:54:08,727-Speed 370.81 samples/sec   Loss 27.2985 Epoch: 1   Global Step: 750   Required: 2 hours
+Training: 2025-05-28 04:54:39,867-[lfw][770]XNorm: 22.408178
+Training: 2025-05-28 04:54:39,868-[lfw][770]Accuracy-Flip: 0.85583+-0.01805
+Training: 2025-05-28 04:54:39,868-[lfw][770]Accuracy-Highest: 0.85583
+Training: 2025-05-28 04:55:08,122-[cfp_fp][770]XNorm: 23.399489
+Training: 2025-05-28 04:55:08,122-[cfp_fp][770]Accuracy-Flip: 0.64000+-0.01851
+Training: 2025-05-28 04:55:08,122-[cfp_fp][770]Accuracy-Highest: 0.64000
+Training: 2025-05-28 04:55:32,365-[agedb_30][770]XNorm: 20.827791
+Training: 2025-05-28 04:55:32,365-[agedb_30][770]Accuracy-Flip: 0.62333+-0.01243
+Training: 2025-05-28 04:55:32,365-[agedb_30][770]Accuracy-Highest: 0.62333
+Training: 2025-05-28 04:55:56,679-[calfw][770]XNorm: 22.899307
+Training: 2025-05-28 04:55:56,679-[calfw][770]Accuracy-Flip: 0.68150+-0.01495
+Training: 2025-05-28 04:55:56,679-[calfw][770]Accuracy-Highest: 0.68150
+Training: 2025-05-28 04:56:21,055-[cplfw][770]XNorm: 22.019617
+Training: 2025-05-28 04:56:21,055-[cplfw][770]Accuracy-Flip: 0.60917+-0.01480
+Training: 2025-05-28 04:56:21,055-[cplfw][770]Accuracy-Highest: 0.60917
+Training: 2025-05-28 04:56:31,631-Speed 44.79 samples/sec   Loss 24.9442 Epoch: 2   Global Step: 800   Required: 3 hours
+Training: 2025-05-28 04:56:48,873-Speed 371.18 samples/sec   Loss 23.9119 Epoch: 2   Global Step: 850   Required: 3 hours
+Training: 2025-05-28 04:57:06,121-Speed 371.06 samples/sec   Loss 24.1016 Epoch: 2   Global Step: 900   Required: 3 hours
+Training: 2025-05-28 04:57:23,372-Speed 370.99 samples/sec   Loss 24.0706 Epoch: 2   Global Step: 950   Required: 2 hours
+Training: 2025-05-28 04:57:40,628-Speed 370.91 samples/sec   Loss 24.3552 Epoch: 2   Global Step: 1000   Required: 2 hours
+Training: 2025-05-28 04:57:57,885-Speed 370.86 samples/sec   Loss 24.2844 Epoch: 2   Global Step: 1050   Required: 2 hours
+Training: 2025-05-28 04:58:15,150-Speed 370.70 samples/sec   Loss 24.3620 Epoch: 2   Global Step: 1100   Required: 2 hours
+Training: 2025-05-28 04:58:32,412-Speed 370.76 samples/sec   Loss 24.3079 Epoch: 2   Global Step: 1150   Required: 2 hours
+Training: 2025-05-28 04:58:58,379-[lfw][1155]XNorm: 22.267787
+Training: 2025-05-28 04:58:58,379-[lfw][1155]Accuracy-Flip: 0.88067+-0.01692
+Training: 2025-05-28 04:58:58,379-[lfw][1155]Accuracy-Highest: 0.88067
+Training: 2025-05-28 04:59:26,584-[cfp_fp][1155]XNorm: 22.496786
+Training: 2025-05-28 04:59:26,585-[cfp_fp][1155]Accuracy-Flip: 0.66471+-0.01661
+Training: 2025-05-28 04:59:26,585-[cfp_fp][1155]Accuracy-Highest: 0.66471
+Training: 2025-05-28 04:59:50,810-[agedb_30][1155]XNorm: 20.242986
+Training: 2025-05-28 04:59:50,810-[agedb_30][1155]Accuracy-Flip: 0.64400+-0.01325
+Training: 2025-05-28 04:59:50,810-[agedb_30][1155]Accuracy-Highest: 0.64400
+Training: 2025-05-28 05:00:15,121-[calfw][1155]XNorm: 22.272816
+Training: 2025-05-28 05:00:15,121-[calfw][1155]Accuracy-Flip: 0.73017+-0.00970
+Training: 2025-05-28 05:00:15,121-[calfw][1155]Accuracy-Highest: 0.73017
+Training: 2025-05-28 05:00:39,429-[cplfw][1155]XNorm: 21.495680
+Training: 2025-05-28 05:00:39,429-[cplfw][1155]Accuracy-Flip: 0.63967+-0.01108
+Training: 2025-05-28 05:00:39,429-[cplfw][1155]Accuracy-Highest: 0.63967
+Training: 2025-05-28 05:00:55,180-Speed 44.83 samples/sec   Loss 20.9273 Epoch: 3   Global Step: 1200   Required: 3 hours
+Training: 2025-05-28 05:01:12,434-Speed 370.94 samples/sec   Loss 20.8925 Epoch: 3   Global Step: 1250   Required: 3 hours
+Training: 2025-05-28 05:01:29,689-Speed 370.91 samples/sec   Loss 21.1773 Epoch: 3   Global Step: 1300   Required: 3 hours
+Training: 2025-05-28 05:01:46,942-Speed 370.95 samples/sec   Loss 21.4544 Epoch: 3   Global Step: 1350   Required: 2 hours
+Training: 2025-05-28 05:02:04,197-Speed 370.92 samples/sec   Loss 21.6229 Epoch: 3   Global Step: 1400   Required: 2 hours
+Training: 2025-05-28 05:02:21,455-Speed 370.84 samples/sec   Loss 21.7918 Epoch: 3   Global Step: 1450   Required: 2 hours
+Training: 2025-05-28 05:02:38,712-Speed 370.87 samples/sec   Loss 21.9954 Epoch: 3   Global Step: 1500   Required: 2 hours
+Training: 2025-05-28 05:03:16,752-[lfw][1540]XNorm: 23.324156
+Training: 2025-05-28 05:03:16,752-[lfw][1540]Accuracy-Flip: 0.89000+-0.01333
+Training: 2025-05-28 05:03:16,752-[lfw][1540]Accuracy-Highest: 0.89000
+Training: 2025-05-28 05:03:45,030-[cfp_fp][1540]XNorm: 22.392005
+Training: 2025-05-28 05:03:45,030-[cfp_fp][1540]Accuracy-Flip: 0.68114+-0.01945
+Training: 2025-05-28 05:03:45,031-[cfp_fp][1540]Accuracy-Highest: 0.68114
+Training: 2025-05-28 05:04:09,263-[agedb_30][1540]XNorm: 21.338006
+Training: 2025-05-28 05:04:09,263-[agedb_30][1540]Accuracy-Flip: 0.66533+-0.01522
+Training: 2025-05-28 05:04:09,263-[agedb_30][1540]Accuracy-Highest: 0.66533
+Training: 2025-05-28 05:04:33,581-[calfw][1540]XNorm: 23.262238
+Training: 2025-05-28 05:04:33,581-[calfw][1540]Accuracy-Flip: 0.74683+-0.01437
+Training: 2025-05-28 05:04:33,581-[calfw][1540]Accuracy-Highest: 0.74683
+Training: 2025-05-28 05:04:57,932-[cplfw][1540]XNorm: 22.251098
+Training: 2025-05-28 05:04:57,932-[cplfw][1540]Accuracy-Flip: 0.64983+-0.01722
+Training: 2025-05-28 05:04:57,932-[cplfw][1540]Accuracy-Highest: 0.64983
+Training: 2025-05-28 05:05:01,527-Speed 44.81 samples/sec   Loss 21.3634 Epoch: 4   Global Step: 1550   Required: 3 hours
+Training: 2025-05-28 05:05:18,772-Speed 371.14 samples/sec   Loss 18.4526 Epoch: 4   Global Step: 1600   Required: 3 hours
+Training: 2025-05-28 05:05:36,020-Speed 371.06 samples/sec   Loss 19.0229 Epoch: 4   Global Step: 1650   Required: 2 hours
+Training: 2025-05-28 05:05:53,266-Speed 371.10 samples/sec   Loss 19.2693 Epoch: 4   Global Step: 1700   Required: 2 hours
+Training: 2025-05-28 05:06:10,523-Speed 370.87 samples/sec   Loss 19.5192 Epoch: 4   Global Step: 1750   Required: 2 hours
+Training: 2025-05-28 05:06:27,778-Speed 370.91 samples/sec   Loss 19.7098 Epoch: 4   Global Step: 1800   Required: 2 hours
+Training: 2025-05-28 05:06:45,038-Speed 370.80 samples/sec   Loss 20.0246 Epoch: 4   Global Step: 1850   Required: 2 hours
+Training: 2025-05-28 05:07:02,294-Speed 370.88 samples/sec   Loss 20.0404 Epoch: 4   Global Step: 1900   Required: 2 hours
+Training: 2025-05-28 05:07:35,154-[lfw][1925]XNorm: 22.498991
+Training: 2025-05-28 05:07:35,154-[lfw][1925]Accuracy-Flip: 0.90400+-0.01138
+Training: 2025-05-28 05:07:35,154-[lfw][1925]Accuracy-Highest: 0.90400
+Training: 2025-05-28 05:08:03,361-[cfp_fp][1925]XNorm: 21.062639
+Training: 2025-05-28 05:08:03,361-[cfp_fp][1925]Accuracy-Flip: 0.69471+-0.02032
+Training: 2025-05-28 05:08:03,361-[cfp_fp][1925]Accuracy-Highest: 0.69471
+Training: 2025-05-28 05:08:27,582-[agedb_30][1925]XNorm: 20.265261
+Training: 2025-05-28 05:08:27,582-[agedb_30][1925]Accuracy-Flip: 0.69967+-0.01297
+Training: 2025-05-28 05:08:27,582-[agedb_30][1925]Accuracy-Highest: 0.69967
+Training: 2025-05-28 05:08:51,912-[calfw][1925]XNorm: 22.242855
+Training: 2025-05-28 05:08:51,912-[calfw][1925]Accuracy-Flip: 0.76417+-0.01450
+Training: 2025-05-28 05:08:51,912-[calfw][1925]Accuracy-Highest: 0.76417
+Training: 2025-05-28 05:09:16,239-[cplfw][1925]XNorm: 21.237607
+Training: 2025-05-28 05:09:16,239-[cplfw][1925]Accuracy-Flip: 0.65833+-0.01869
+Training: 2025-05-28 05:09:16,239-[cplfw][1925]Accuracy-Highest: 0.65833
+Training: 2025-05-28 05:09:25,013-Speed 44.84 samples/sec   Loss 18.4452 Epoch: 5   Global Step: 1950   Required: 3 hours
+Training: 2025-05-28 05:09:42,260-Speed 371.06 samples/sec   Loss 17.0248 Epoch: 5   Global Step: 2000   Required: 2 hours
+Training: 2025-05-28 05:09:59,506-Speed 371.12 samples/sec   Loss 17.3866 Epoch: 5   Global Step: 2050   Required: 2 hours
+Training: 2025-05-28 05:10:16,752-Speed 371.09 samples/sec   Loss 17.6068 Epoch: 5   Global Step: 2100   Required: 2 hours
+Training: 2025-05-28 05:10:34,003-Speed 371.01 samples/sec   Loss 17.8909 Epoch: 5   Global Step: 2150   Required: 2 hours
+Training: 2025-05-28 05:10:51,262-Speed 370.82 samples/sec   Loss 18.3874 Epoch: 5   Global Step: 2200   Required: 2 hours
+Training: 2025-05-28 05:11:08,521-Speed 370.82 samples/sec   Loss 18.3768 Epoch: 5   Global Step: 2250   Required: 2 hours
+Training: 2025-05-28 05:11:25,781-Speed 370.80 samples/sec   Loss 18.7825 Epoch: 5   Global Step: 2300   Required: 2 hours
+Training: 2025-05-28 05:11:53,471-[lfw][2310]XNorm: 22.590506
+Training: 2025-05-28 05:11:53,471-[lfw][2310]Accuracy-Flip: 0.90750+-0.01243
+Training: 2025-05-28 05:11:53,471-[lfw][2310]Accuracy-Highest: 0.90750
+Training: 2025-05-28 05:12:21,678-[cfp_fp][2310]XNorm: 20.835920
+Training: 2025-05-28 05:12:21,678-[cfp_fp][2310]Accuracy-Flip: 0.70429+-0.01719
+Training: 2025-05-28 05:12:21,678-[cfp_fp][2310]Accuracy-Highest: 0.70429
+Training: 2025-05-28 05:12:45,921-[agedb_30][2310]XNorm: 20.077032
+Training: 2025-05-28 05:12:45,921-[agedb_30][2310]Accuracy-Flip: 0.70550+-0.01696
+Training: 2025-05-28 05:12:45,921-[agedb_30][2310]Accuracy-Highest: 0.70550
+Training: 2025-05-28 05:13:10,275-[calfw][2310]XNorm: 22.380789
+Training: 2025-05-28 05:13:10,275-[calfw][2310]Accuracy-Flip: 0.77233+-0.01373
+Training: 2025-05-28 05:13:10,275-[calfw][2310]Accuracy-Highest: 0.77233
+Training: 2025-05-28 05:13:34,632-[cplfw][2310]XNorm: 21.047454
+Training: 2025-05-28 05:13:34,632-[cplfw][2310]Accuracy-Flip: 0.67583+-0.01906
+Training: 2025-05-28 05:13:34,632-[cplfw][2310]Accuracy-Highest: 0.67583
+Training: 2025-05-28 05:13:48,582-Speed 44.82 samples/sec   Loss 16.0237 Epoch: 6   Global Step: 2350   Required: 2 hours
+Training: 2025-05-28 05:14:05,829-Speed 371.08 samples/sec   Loss 15.7299 Epoch: 6   Global Step: 2400   Required: 2 hours
+Training: 2025-05-28 05:14:23,083-Speed 370.92 samples/sec   Loss 16.2368 Epoch: 6   Global Step: 2450   Required: 2 hours
+Training: 2025-05-28 05:14:40,341-Speed 370.86 samples/sec   Loss 16.5989 Epoch: 6   Global Step: 2500   Required: 2 hours
+Training: 2025-05-28 05:14:57,599-Speed 370.84 samples/sec   Loss 16.8245 Epoch: 6   Global Step: 2550   Required: 2 hours
+Training: 2025-05-28 05:15:14,857-Speed 370.85 samples/sec   Loss 17.0036 Epoch: 6   Global Step: 2600   Required: 2 hours
+Training: 2025-05-28 05:15:32,114-Speed 370.87 samples/sec   Loss 17.1895 Epoch: 6   Global Step: 2650   Required: 2 hours
+Training: 2025-05-28 05:16:11,901-[lfw][2695]XNorm: 22.363464
+Training: 2025-05-28 05:16:11,901-[lfw][2695]Accuracy-Flip: 0.91333+-0.01434
+Training: 2025-05-28 05:16:11,901-[lfw][2695]Accuracy-Highest: 0.91333
+Training: 2025-05-28 05:16:40,117-[cfp_fp][2695]XNorm: 20.480288
+Training: 2025-05-28 05:16:40,117-[cfp_fp][2695]Accuracy-Flip: 0.71557+-0.02018
+Training: 2025-05-28 05:16:40,117-[cfp_fp][2695]Accuracy-Highest: 0.71557
+Training: 2025-05-28 05:17:04,370-[agedb_30][2695]XNorm: 19.574933
+Training: 2025-05-28 05:17:04,370-[agedb_30][2695]Accuracy-Flip: 0.72683+-0.01429
+Training: 2025-05-28 05:17:04,370-[agedb_30][2695]Accuracy-Highest: 0.72683
+Training: 2025-05-28 05:17:28,740-[calfw][2695]XNorm: 22.178210
+Training: 2025-05-28 05:17:28,740-[calfw][2695]Accuracy-Flip: 0.78083+-0.01389
+Training: 2025-05-28 05:17:28,740-[calfw][2695]Accuracy-Highest: 0.78083
+Training: 2025-05-28 05:17:53,094-[cplfw][2695]XNorm: 20.701328
+Training: 2025-05-28 05:17:53,094-[cplfw][2695]Accuracy-Flip: 0.68000+-0.01470
+Training: 2025-05-28 05:17:53,094-[cplfw][2695]Accuracy-Highest: 0.68000
+Training: 2025-05-28 05:17:55,023-Speed 44.78 samples/sec   Loss 17.0833 Epoch: 7   Global Step: 2700   Required: 2 hours
+Training: 2025-05-28 05:18:12,262-Speed 371.25 samples/sec   Loss 13.9761 Epoch: 7   Global Step: 2750   Required: 2 hours
+Training: 2025-05-28 05:18:29,505-Speed 371.17 samples/sec   Loss 14.6955 Epoch: 7   Global Step: 2800   Required: 2 hours
+Training: 2025-05-28 05:18:46,748-Speed 371.18 samples/sec   Loss 15.1065 Epoch: 7   Global Step: 2850   Required: 2 hours
+Training: 2025-05-28 05:19:03,993-Speed 371.12 samples/sec   Loss 15.4948 Epoch: 7   Global Step: 2900   Required: 2 hours
+Training: 2025-05-28 05:19:21,248-Speed 370.91 samples/sec   Loss 15.9518 Epoch: 7   Global Step: 2950   Required: 2 hours
+Training: 2025-05-28 05:19:38,501-Speed 370.96 samples/sec   Loss 15.9289 Epoch: 7   Global Step: 3000   Required: 2 hours
+Training: 2025-05-28 05:19:55,755-Speed 370.93 samples/sec   Loss 16.2691 Epoch: 7   Global Step: 3050   Required: 2 hours
+Training: 2025-05-28 05:20:30,363-[lfw][3080]XNorm: 22.861923
+Training: 2025-05-28 05:20:30,363-[lfw][3080]Accuracy-Flip: 0.92450+-0.01229
+Training: 2025-05-28 05:20:30,363-[lfw][3080]Accuracy-Highest: 0.92450
+Training: 2025-05-28 05:20:58,685-[cfp_fp][3080]XNorm: 20.537142
+Training: 2025-05-28 05:20:58,685-[cfp_fp][3080]Accuracy-Flip: 0.71243+-0.01693
+Training: 2025-05-28 05:20:58,685-[cfp_fp][3080]Accuracy-Highest: 0.71557
+Training: 2025-05-28 05:21:22,907-[agedb_30][3080]XNorm: 20.021348
+Training: 2025-05-28 05:21:22,907-[agedb_30][3080]Accuracy-Flip: 0.72067+-0.01321
+Training: 2025-05-28 05:21:22,907-[agedb_30][3080]Accuracy-Highest: 0.72683
+Training: 2025-05-28 05:21:47,256-[calfw][3080]XNorm: 22.497921
+Training: 2025-05-28 05:21:47,257-[calfw][3080]Accuracy-Flip: 0.79000+-0.01258
+Training: 2025-05-28 05:21:47,257-[calfw][3080]Accuracy-Highest: 0.79000
+Training: 2025-05-28 05:22:11,627-[cplfw][3080]XNorm: 21.073489
+Training: 2025-05-28 05:22:11,627-[cplfw][3080]Accuracy-Flip: 0.69117+-0.01493
+Training: 2025-05-28 05:22:11,627-[cplfw][3080]Accuracy-Highest: 0.69117
+Training: 2025-05-28 05:22:18,719-Speed 44.77 samples/sec   Loss 15.0758 Epoch: 8   Global Step: 3100   Required: 2 hours
+Training: 2025-05-28 05:22:35,962-Speed 371.17 samples/sec   Loss 13.3162 Epoch: 8   Global Step: 3150   Required: 2 hours
+Training: 2025-05-28 05:22:53,211-Speed 371.04 samples/sec   Loss 13.9557 Epoch: 8   Global Step: 3200   Required: 2 hours
+Training: 2025-05-28 05:23:10,466-Speed 370.92 samples/sec   Loss 14.2152 Epoch: 8   Global Step: 3250   Required: 2 hours
+Training: 2025-05-28 05:23:27,716-Speed 371.02 samples/sec   Loss 14.4791 Epoch: 8   Global Step: 3300   Required: 2 hours
+Training: 2025-05-28 05:23:44,965-Speed 371.02 samples/sec   Loss 14.7537 Epoch: 8   Global Step: 3350   Required: 2 hours
+Training: 2025-05-28 05:24:02,219-Speed 370.93 samples/sec   Loss 15.0213 Epoch: 8   Global Step: 3400   Required: 2 hours
+Training: 2025-05-28 05:24:19,477-Speed 370.86 samples/sec   Loss 15.3908 Epoch: 8   Global Step: 3450   Required: 2 hours
+Training: 2025-05-28 05:24:48,934-[lfw][3465]XNorm: 22.424171
+Training: 2025-05-28 05:24:48,934-[lfw][3465]Accuracy-Flip: 0.92483+-0.01332
+Training: 2025-05-28 05:24:48,934-[lfw][3465]Accuracy-Highest: 0.92483
+Training: 2025-05-28 05:25:17,145-[cfp_fp][3465]XNorm: 20.009677
+Training: 2025-05-28 05:25:17,146-[cfp_fp][3465]Accuracy-Flip: 0.72171+-0.01709
+Training: 2025-05-28 05:25:17,146-[cfp_fp][3465]Accuracy-Highest: 0.72171
+Training: 2025-05-28 05:25:41,398-[agedb_30][3465]XNorm: 19.590299
+Training: 2025-05-28 05:25:41,398-[agedb_30][3465]Accuracy-Flip: 0.71233+-0.01254
+Training: 2025-05-28 05:25:41,398-[agedb_30][3465]Accuracy-Highest: 0.72683
+Training: 2025-05-28 05:26:05,796-[calfw][3465]XNorm: 22.086794
+Training: 2025-05-28 05:26:05,796-[calfw][3465]Accuracy-Flip: 0.78867+-0.01501
+Training: 2025-05-28 05:26:05,796-[calfw][3465]Accuracy-Highest: 0.79000
+Training: 2025-05-28 05:26:30,190-[cplfw][3465]XNorm: 20.530010
+Training: 2025-05-28 05:26:30,190-[cplfw][3465]Accuracy-Flip: 0.69400+-0.01487
+Training: 2025-05-28 05:26:30,190-[cplfw][3465]Accuracy-Highest: 0.69400
+Training: 2025-05-28 05:26:42,442-Speed 44.77 samples/sec   Loss 13.0480 Epoch: 9   Global Step: 3500   Required: 2 hours
+Training: 2025-05-28 05:26:59,677-Speed 371.35 samples/sec   Loss 12.4119 Epoch: 9   Global Step: 3550   Required: 2 hours
+Training: 2025-05-28 05:27:16,921-Speed 371.14 samples/sec   Loss 13.1001 Epoch: 9   Global Step: 3600   Required: 2 hours
+Training: 2025-05-28 05:27:34,169-Speed 371.07 samples/sec   Loss 13.5135 Epoch: 9   Global Step: 3650   Required: 2 hours
+Training: 2025-05-28 05:27:51,418-Speed 371.03 samples/sec   Loss 13.6357 Epoch: 9   Global Step: 3700   Required: 2 hours
+Training: 2025-05-28 05:28:08,671-Speed 370.97 samples/sec   Loss 13.9604 Epoch: 9   Global Step: 3750   Required: 2 hours
+Training: 2025-05-28 05:28:25,924-Speed 370.94 samples/sec   Loss 14.2925 Epoch: 9   Global Step: 3800   Required: 2 hours
+Training: 2025-05-28 05:28:43,180-Speed 370.89 samples/sec   Loss 14.5750 Epoch: 9   Global Step: 3850   Required: 2 hours
+Training: 2025-05-28 05:29:07,408-[lfw][3850]XNorm: 22.873864
+Training: 2025-05-28 05:29:07,408-[lfw][3850]Accuracy-Flip: 0.92567+-0.01560
+Training: 2025-05-28 05:29:07,408-[lfw][3850]Accuracy-Highest: 0.92567
+Training: 2025-05-28 05:29:35,625-[cfp_fp][3850]XNorm: 20.308123
+Training: 2025-05-28 05:29:35,625-[cfp_fp][3850]Accuracy-Flip: 0.72271+-0.01962
+Training: 2025-05-28 05:29:35,625-[cfp_fp][3850]Accuracy-Highest: 0.72271
+Training: 2025-05-28 05:29:59,832-[agedb_30][3850]XNorm: 19.871454
+Training: 2025-05-28 05:29:59,832-[agedb_30][3850]Accuracy-Flip: 0.72050+-0.01542
+Training: 2025-05-28 05:29:59,832-[agedb_30][3850]Accuracy-Highest: 0.72683
+Training: 2025-05-28 05:30:24,170-[calfw][3850]XNorm: 22.534105
+Training: 2025-05-28 05:30:24,170-[calfw][3850]Accuracy-Flip: 0.79750+-0.01413
+Training: 2025-05-28 05:30:24,170-[calfw][3850]Accuracy-Highest: 0.79750
+Training: 2025-05-28 05:30:48,496-[cplfw][3850]XNorm: 20.852678
+Training: 2025-05-28 05:30:48,496-[cplfw][3850]Accuracy-Flip: 0.68717+-0.01476
+Training: 2025-05-28 05:30:48,496-[cplfw][3850]Accuracy-Highest: 0.69400
+Training: 2025-05-28 05:31:05,902-Speed 44.84 samples/sec   Loss 11.4186 Epoch: 10   Global Step: 3900   Required: 2 hours
+Training: 2025-05-28 05:31:23,136-Speed 371.35 samples/sec   Loss 11.6034 Epoch: 10   Global Step: 3950   Required: 2 hours
+Training: 2025-05-28 05:31:40,376-Speed 371.23 samples/sec   Loss 12.2196 Epoch: 10   Global Step: 4000   Required: 2 hours
+Training: 2025-05-28 05:31:57,617-Speed 371.21 samples/sec   Loss 12.6625 Epoch: 10   Global Step: 4050   Required: 2 hours
+Training: 2025-05-28 05:32:14,863-Speed 371.11 samples/sec   Loss 12.8464 Epoch: 10   Global Step: 4100   Required: 2 hours
+Training: 2025-05-28 05:32:32,109-Speed 371.10 samples/sec   Loss 13.2362 Epoch: 10   Global Step: 4150   Required: 2 hours
+Training: 2025-05-28 05:32:49,358-Speed 371.04 samples/sec   Loss 13.4740 Epoch: 10   Global Step: 4200   Required: 2 hours
+Training: 2025-05-28 05:33:25,641-[lfw][4235]XNorm: 22.324833
+Training: 2025-05-28 05:33:25,641-[lfw][4235]Accuracy-Flip: 0.92417+-0.01283
+Training: 2025-05-28 05:33:25,641-[lfw][4235]Accuracy-Highest: 0.92567
+Training: 2025-05-28 05:33:53,764-[cfp_fp][4235]XNorm: 19.702375
+Training: 2025-05-28 05:33:53,764-[cfp_fp][4235]Accuracy-Flip: 0.72443+-0.01838
+Training: 2025-05-28 05:33:53,764-[cfp_fp][4235]Accuracy-Highest: 0.72443
+Training: 2025-05-28 05:34:17,960-[agedb_30][4235]XNorm: 19.508335
+Training: 2025-05-28 05:34:17,960-[agedb_30][4235]Accuracy-Flip: 0.73667+-0.01506
+Training: 2025-05-28 05:34:17,960-[agedb_30][4235]Accuracy-Highest: 0.73667
+Training: 2025-05-28 05:34:42,241-[calfw][4235]XNorm: 21.958152
+Training: 2025-05-28 05:34:42,241-[calfw][4235]Accuracy-Flip: 0.79850+-0.01469
+Training: 2025-05-28 05:34:42,241-[calfw][4235]Accuracy-Highest: 0.79850
+Training: 2025-05-28 05:35:06,557-[cplfw][4235]XNorm: 20.248657
+Training: 2025-05-28 05:35:06,557-[cplfw][4235]Accuracy-Flip: 0.68683+-0.01820
+Training: 2025-05-28 05:35:06,557-[cplfw][4235]Accuracy-Highest: 0.69400
+Training: 2025-05-28 05:35:11,924-Speed 44.89 samples/sec   Loss 12.6636 Epoch: 11   Global Step: 4250   Required: 2 hours
+Training: 2025-05-28 05:35:29,153-Speed 371.47 samples/sec   Loss 10.3565 Epoch: 11   Global Step: 4300   Required: 2 hours
+Training: 2025-05-28 05:35:46,391-Speed 371.29 samples/sec   Loss 11.0182 Epoch: 11   Global Step: 4350   Required: 2 hours
+Training: 2025-05-28 05:36:03,631-Speed 371.22 samples/sec   Loss 11.5373 Epoch: 11   Global Step: 4400   Required: 2 hours
+Training: 2025-05-28 05:36:20,876-Speed 371.12 samples/sec   Loss 11.9272 Epoch: 11   Global Step: 4450   Required: 2 hours
+Training: 2025-05-28 05:36:38,124-Speed 371.08 samples/sec   Loss 12.2277 Epoch: 11   Global Step: 4500   Required: 2 hours
+Training: 2025-05-28 05:36:55,369-Speed 371.11 samples/sec   Loss 12.5587 Epoch: 11   Global Step: 4550   Required: 2 hours
+Training: 2025-05-28 05:37:12,623-Speed 370.94 samples/sec   Loss 12.8475 Epoch: 11   Global Step: 4600   Required: 2 hours
+Training: 2025-05-28 05:37:43,721-[lfw][4620]XNorm: 22.475925
+Training: 2025-05-28 05:37:43,721-[lfw][4620]Accuracy-Flip: 0.93117+-0.01106
+Training: 2025-05-28 05:37:43,721-[lfw][4620]Accuracy-Highest: 0.93117
+Training: 2025-05-28 05:38:11,963-[cfp_fp][4620]XNorm: 19.956257
+Training: 2025-05-28 05:38:11,963-[cfp_fp][4620]Accuracy-Flip: 0.72371+-0.01824
+Training: 2025-05-28 05:38:11,963-[cfp_fp][4620]Accuracy-Highest: 0.72443
+Training: 2025-05-28 05:38:36,150-[agedb_30][4620]XNorm: 19.863143
+Training: 2025-05-28 05:38:36,150-[agedb_30][4620]Accuracy-Flip: 0.72650+-0.01934
+Training: 2025-05-28 05:38:36,150-[agedb_30][4620]Accuracy-Highest: 0.73667
+Training: 2025-05-28 05:39:00,429-[calfw][4620]XNorm: 22.318528
+Training: 2025-05-28 05:39:00,429-[calfw][4620]Accuracy-Flip: 0.80167+-0.01348
+Training: 2025-05-28 05:39:00,429-[calfw][4620]Accuracy-Highest: 0.80167
+Training: 2025-05-28 05:39:24,770-[cplfw][4620]XNorm: 20.402122
+Training: 2025-05-28 05:39:24,770-[cplfw][4620]Accuracy-Flip: 0.69800+-0.01429
+Training: 2025-05-28 05:39:24,770-[cplfw][4620]Accuracy-Highest: 0.69800
+Training: 2025-05-28 05:39:35,259-Speed 44.87 samples/sec   Loss 10.5858 Epoch: 12   Global Step: 4650   Required: 2 hours
+Training: 2025-05-28 05:39:52,499-Speed 371.23 samples/sec   Loss 9.8789 Epoch: 12   Global Step: 4700   Required: 2 hours
+Training: 2025-05-28 05:40:09,738-Speed 371.24 samples/sec   Loss 10.4380 Epoch: 12   Global Step: 4750   Required: 2 hours
+Training: 2025-05-28 05:40:26,981-Speed 371.17 samples/sec   Loss 10.7588 Epoch: 12   Global Step: 4800   Required: 2 hours
+Training: 2025-05-28 05:40:44,226-Speed 371.13 samples/sec   Loss 11.2226 Epoch: 12   Global Step: 4850   Required: 2 hours
+Training: 2025-05-28 05:41:01,472-Speed 371.09 samples/sec   Loss 11.4524 Epoch: 12   Global Step: 4900   Required: 2 hours
+Training: 2025-05-28 05:41:18,715-Speed 371.19 samples/sec   Loss 11.8454 Epoch: 12   Global Step: 4950   Required: 2 hours
+Training: 2025-05-28 05:41:35,957-Speed 371.18 samples/sec   Loss 12.1092 Epoch: 12   Global Step: 5000   Required: 2 hours
+Training: 2025-05-28 05:42:01,878-[lfw][5005]XNorm: 22.233219
+Training: 2025-05-28 05:42:01,878-[lfw][5005]Accuracy-Flip: 0.93067+-0.01052
+Training: 2025-05-28 05:42:01,878-[lfw][5005]Accuracy-Highest: 0.93117
+Training: 2025-05-28 05:42:29,993-[cfp_fp][5005]XNorm: 19.665493
+Training: 2025-05-28 05:42:29,994-[cfp_fp][5005]Accuracy-Flip: 0.73614+-0.01700
+Training: 2025-05-28 05:42:29,994-[cfp_fp][5005]Accuracy-Highest: 0.73614
+Training: 2025-05-28 05:42:54,171-[agedb_30][5005]XNorm: 19.726907
+Training: 2025-05-28 05:42:54,171-[agedb_30][5005]Accuracy-Flip: 0.74700+-0.01737
+Training: 2025-05-28 05:42:54,171-[agedb_30][5005]Accuracy-Highest: 0.74700
+Training: 2025-05-28 05:43:18,442-[calfw][5005]XNorm: 22.228581
+Training: 2025-05-28 05:43:18,442-[calfw][5005]Accuracy-Flip: 0.80117+-0.01278
+Training: 2025-05-28 05:43:18,442-[calfw][5005]Accuracy-Highest: 0.80167
+Training: 2025-05-28 05:43:42,721-[cplfw][5005]XNorm: 20.181171
+Training: 2025-05-28 05:43:42,721-[cplfw][5005]Accuracy-Flip: 0.69083+-0.00898
+Training: 2025-05-28 05:43:42,721-[cplfw][5005]Accuracy-Highest: 0.69800
+Training: 2025-05-28 05:43:58,365-Speed 44.94 samples/sec   Loss 9.3426 Epoch: 13   Global Step: 5050   Required: 2 hours
+Training: 2025-05-28 05:44:15,597-Speed 371.39 samples/sec   Loss 9.3821 Epoch: 13   Global Step: 5100   Required: 2 hours
+Training: 2025-05-28 05:44:32,837-Speed 371.24 samples/sec   Loss 9.6826 Epoch: 13   Global Step: 5150   Required: 2 hours
+Training: 2025-05-28 05:44:50,080-Speed 371.17 samples/sec   Loss 10.1772 Epoch: 13   Global Step: 5200   Required: 2 hours
+Training: 2025-05-28 05:45:07,322-Speed 371.19 samples/sec   Loss 10.6749 Epoch: 13   Global Step: 5250   Required: 2 hours
+Training: 2025-05-28 05:45:24,565-Speed 371.17 samples/sec   Loss 10.8026 Epoch: 13   Global Step: 5300   Required: 2 hours
+Training: 2025-05-28 05:45:41,812-Speed 371.07 samples/sec   Loss 11.1741 Epoch: 13   Global Step: 5350   Required: 2 hours
+Training: 2025-05-28 05:46:19,806-[lfw][5390]XNorm: 21.934897
+Training: 2025-05-28 05:46:19,806-[lfw][5390]Accuracy-Flip: 0.92800+-0.01260
+Training: 2025-05-28 05:46:19,806-[lfw][5390]Accuracy-Highest: 0.93117
+Training: 2025-05-28 05:46:47,913-[cfp_fp][5390]XNorm: 19.274660
+Training: 2025-05-28 05:46:47,913-[cfp_fp][5390]Accuracy-Flip: 0.73700+-0.02052
+Training: 2025-05-28 05:46:47,913-[cfp_fp][5390]Accuracy-Highest: 0.73700
+Training: 2025-05-28 05:47:12,095-[agedb_30][5390]XNorm: 19.603812
+Training: 2025-05-28 05:47:12,095-[agedb_30][5390]Accuracy-Flip: 0.72683+-0.01920
+Training: 2025-05-28 05:47:12,095-[agedb_30][5390]Accuracy-Highest: 0.74700
+Training: 2025-05-28 05:47:36,375-[calfw][5390]XNorm: 21.886322
+Training: 2025-05-28 05:47:36,375-[calfw][5390]Accuracy-Flip: 0.80617+-0.01643
+Training: 2025-05-28 05:47:36,375-[calfw][5390]Accuracy-Highest: 0.80617
+Training: 2025-05-28 05:48:00,639-[cplfw][5390]XNorm: 19.792873
+Training: 2025-05-28 05:48:00,639-[cplfw][5390]Accuracy-Flip: 0.70267+-0.01729
+Training: 2025-05-28 05:48:00,639-[cplfw][5390]Accuracy-Highest: 0.70267
+Training: 2025-05-28 05:48:04,254-Speed 44.93 samples/sec   Loss 10.5522 Epoch: 14   Global Step: 5400   Required: 2 hours
+Training: 2025-05-28 05:48:21,485-Speed 371.43 samples/sec   Loss 8.1447 Epoch: 14   Global Step: 5450   Required: 2 hours
+Training: 2025-05-28 05:48:38,721-Speed 371.32 samples/sec   Loss 8.6988 Epoch: 14   Global Step: 5500   Required: 2 hours
+Training: 2025-05-28 05:48:55,959-Speed 371.27 samples/sec   Loss 9.2411 Epoch: 14   Global Step: 5550   Required: 2 hours
+Training: 2025-05-28 05:49:13,201-Speed 371.20 samples/sec   Loss 9.5632 Epoch: 14   Global Step: 5600   Required: 2 hours
+Training: 2025-05-28 05:49:30,445-Speed 371.14 samples/sec   Loss 9.8437 Epoch: 14   Global Step: 5650   Required: 2 hours
+Training: 2025-05-28 05:49:47,690-Speed 371.13 samples/sec   Loss 10.2531 Epoch: 14   Global Step: 5700   Required: 2 hours
+Training: 2025-05-28 05:50:04,936-Speed 371.10 samples/sec   Loss 10.5749 Epoch: 14   Global Step: 5750   Required: 2 hours
+Training: 2025-05-28 05:50:37,742-[lfw][5775]XNorm: 21.174587
+Training: 2025-05-28 05:50:37,742-[lfw][5775]Accuracy-Flip: 0.92900+-0.01489
+Training: 2025-05-28 05:50:37,742-[lfw][5775]Accuracy-Highest: 0.93117
+Training: 2025-05-28 05:51:05,942-[cfp_fp][5775]XNorm: 18.538571
+Training: 2025-05-28 05:51:05,942-[cfp_fp][5775]Accuracy-Flip: 0.73329+-0.01870
+Training: 2025-05-28 05:51:05,942-[cfp_fp][5775]Accuracy-Highest: 0.73700
+Training: 2025-05-28 05:51:30,133-[agedb_30][5775]XNorm: 18.857375
+Training: 2025-05-28 05:51:30,133-[agedb_30][5775]Accuracy-Flip: 0.73767+-0.01995
+Training: 2025-05-28 05:51:30,133-[agedb_30][5775]Accuracy-Highest: 0.74700
+Training: 2025-05-28 05:51:54,398-[calfw][5775]XNorm: 20.997488
+Training: 2025-05-28 05:51:54,399-[calfw][5775]Accuracy-Flip: 0.79900+-0.00943
+Training: 2025-05-28 05:51:54,399-[calfw][5775]Accuracy-Highest: 0.80617
+Training: 2025-05-28 05:52:18,666-[cplfw][5775]XNorm: 19.123534
+Training: 2025-05-28 05:52:18,666-[cplfw][5775]Accuracy-Flip: 0.69100+-0.01798
+Training: 2025-05-28 05:52:18,666-[cplfw][5775]Accuracy-Highest: 0.70267
+Training: 2025-05-28 05:52:27,421-Speed 44.92 samples/sec   Loss 8.9875 Epoch: 15   Global Step: 5800   Required: 2 hours
+Training: 2025-05-28 05:52:44,658-Speed 371.30 samples/sec   Loss 7.7234 Epoch: 15   Global Step: 5850   Required: 2 hours
+Training: 2025-05-28 05:53:01,894-Speed 371.31 samples/sec   Loss 8.1573 Epoch: 15   Global Step: 5900   Required: 2 hours
+Training: 2025-05-28 05:53:19,138-Speed 371.15 samples/sec   Loss 8.5603 Epoch: 15   Global Step: 5950   Required: 2 hours
+Training: 2025-05-28 05:53:36,381-Speed 371.16 samples/sec   Loss 9.0673 Epoch: 15   Global Step: 6000   Required: 2 hours
+Training: 2025-05-28 05:53:53,626-Speed 371.13 samples/sec   Loss 9.3130 Epoch: 15   Global Step: 6050   Required: 2 hours
+Training: 2025-05-28 05:54:10,870-Speed 371.15 samples/sec   Loss 9.5778 Epoch: 15   Global Step: 6100   Required: 2 hours
+Training: 2025-05-28 05:54:28,116-Speed 371.11 samples/sec   Loss 9.7244 Epoch: 15   Global Step: 6150   Required: 2 hours
+Training: 2025-05-28 05:54:55,754-[lfw][6160]XNorm: 21.852599
+Training: 2025-05-28 05:54:55,754-[lfw][6160]Accuracy-Flip: 0.92733+-0.01218
+Training: 2025-05-28 05:54:55,754-[lfw][6160]Accuracy-Highest: 0.93117
+Training: 2025-05-28 05:55:23,912-[cfp_fp][6160]XNorm: 19.163599
+Training: 2025-05-28 05:55:23,912-[cfp_fp][6160]Accuracy-Flip: 0.73471+-0.01426
+Training: 2025-05-28 05:55:23,912-[cfp_fp][6160]Accuracy-Highest: 0.73700
+Training: 2025-05-28 05:55:48,096-[agedb_30][6160]XNorm: 19.533479
+Training: 2025-05-28 05:55:48,096-[agedb_30][6160]Accuracy-Flip: 0.74150+-0.01691
+Training: 2025-05-28 05:55:48,096-[agedb_30][6160]Accuracy-Highest: 0.74700
+Training: 2025-05-28 05:56:12,365-[calfw][6160]XNorm: 21.812001
+Training: 2025-05-28 05:56:12,365-[calfw][6160]Accuracy-Flip: 0.80417+-0.01332
+Training: 2025-05-28 05:56:12,365-[calfw][6160]Accuracy-Highest: 0.80617
+Training: 2025-05-28 05:56:36,645-[cplfw][6160]XNorm: 19.622568
+Training: 2025-05-28 05:56:36,645-[cplfw][6160]Accuracy-Flip: 0.69533+-0.01598
+Training: 2025-05-28 05:56:36,645-[cplfw][6160]Accuracy-Highest: 0.70267
+Training: 2025-05-28 05:56:50,580-Speed 44.92 samples/sec   Loss 7.6291 Epoch: 16   Global Step: 6200   Required: 2 hours
+Training: 2025-05-28 05:57:07,815-Speed 371.34 samples/sec   Loss 7.2747 Epoch: 16   Global Step: 6250   Required: 2 hours
+Training: 2025-05-28 05:57:25,052-Speed 371.29 samples/sec   Loss 7.7243 Epoch: 16   Global Step: 6300   Required: 2 hours
+Training: 2025-05-28 05:57:42,290-Speed 371.28 samples/sec   Loss 7.9674 Epoch: 16   Global Step: 6350   Required: 2 hours
+Training: 2025-05-28 05:57:59,532-Speed 371.20 samples/sec   Loss 8.4654 Epoch: 16   Global Step: 6400   Required: 2 hours
+Training: 2025-05-28 05:58:16,775-Speed 371.16 samples/sec   Loss 8.6977 Epoch: 16   Global Step: 6450   Required: 2 hours
+Training: 2025-05-28 05:58:34,025-Speed 371.02 samples/sec   Loss 9.0526 Epoch: 16   Global Step: 6500   Required: 2 hours
+Training: 2025-05-28 05:59:13,730-[lfw][6545]XNorm: 21.740422
+Training: 2025-05-28 05:59:13,730-[lfw][6545]Accuracy-Flip: 0.92867+-0.01147
+Training: 2025-05-28 05:59:13,730-[lfw][6545]Accuracy-Highest: 0.93117
+Training: 2025-05-28 05:59:41,984-[cfp_fp][6545]XNorm: 19.165322
+Training: 2025-05-28 05:59:41,984-[cfp_fp][6545]Accuracy-Flip: 0.72843+-0.01478
+Training: 2025-05-28 05:59:41,984-[cfp_fp][6545]Accuracy-Highest: 0.73700
+Training: 2025-05-28 06:00:06,158-[agedb_30][6545]XNorm: 19.254719
+Training: 2025-05-28 06:00:06,158-[agedb_30][6545]Accuracy-Flip: 0.74250+-0.01679
+Training: 2025-05-28 06:00:06,158-[agedb_30][6545]Accuracy-Highest: 0.74700
+Training: 2025-05-28 06:00:30,436-[calfw][6545]XNorm: 21.712601
+Training: 2025-05-28 06:00:30,436-[calfw][6545]Accuracy-Flip: 0.80050+-0.01745
+Training: 2025-05-28 06:00:30,436-[calfw][6545]Accuracy-Highest: 0.80617
+Training: 2025-05-28 06:00:54,688-[cplfw][6545]XNorm: 19.544500
+Training: 2025-05-28 06:00:54,688-[cplfw][6545]Accuracy-Flip: 0.69033+-0.01490
+Training: 2025-05-28 06:00:54,688-[cplfw][6545]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:00:56,596-Speed 44.89 samples/sec   Loss 9.1389 Epoch: 17   Global Step: 6550   Required: 2 hours
+Training: 2025-05-28 06:01:13,831-Speed 371.33 samples/sec   Loss 6.3589 Epoch: 17   Global Step: 6600   Required: 2 hours
+Training: 2025-05-28 06:01:31,068-Speed 371.31 samples/sec   Loss 6.6803 Epoch: 17   Global Step: 6650   Required: 2 hours
+Training: 2025-05-28 06:01:48,313-Speed 371.13 samples/sec   Loss 7.3393 Epoch: 17   Global Step: 6700   Required: 2 hours
+Training: 2025-05-28 06:02:05,557-Speed 371.13 samples/sec   Loss 7.6614 Epoch: 17   Global Step: 6750   Required: 2 hours
+Training: 2025-05-28 06:02:22,803-Speed 371.11 samples/sec   Loss 7.8951 Epoch: 17   Global Step: 6800   Required: 2 hours
+Training: 2025-05-28 06:02:40,052-Speed 371.04 samples/sec   Loss 8.2846 Epoch: 17   Global Step: 6850   Required: 2 hours
+Training: 2025-05-28 06:02:57,295-Speed 371.16 samples/sec   Loss 8.4742 Epoch: 17   Global Step: 6900   Required: 2 hours
+Training: 2025-05-28 06:03:31,830-[lfw][6930]XNorm: 22.408720
+Training: 2025-05-28 06:03:31,830-[lfw][6930]Accuracy-Flip: 0.92717+-0.01295
+Training: 2025-05-28 06:03:31,830-[lfw][6930]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:04:00,072-[cfp_fp][6930]XNorm: 19.609576
+Training: 2025-05-28 06:04:00,072-[cfp_fp][6930]Accuracy-Flip: 0.73829+-0.01988
+Training: 2025-05-28 06:04:00,072-[cfp_fp][6930]Accuracy-Highest: 0.73829
+Training: 2025-05-28 06:04:24,232-[agedb_30][6930]XNorm: 19.792546
+Training: 2025-05-28 06:04:24,232-[agedb_30][6930]Accuracy-Flip: 0.74717+-0.02258
+Training: 2025-05-28 06:04:24,232-[agedb_30][6930]Accuracy-Highest: 0.74717
+Training: 2025-05-28 06:04:48,499-[calfw][6930]XNorm: 22.245381
+Training: 2025-05-28 06:04:48,499-[calfw][6930]Accuracy-Flip: 0.79917+-0.01469
+Training: 2025-05-28 06:04:48,499-[calfw][6930]Accuracy-Highest: 0.80617
+Training: 2025-05-28 06:05:12,747-[cplfw][6930]XNorm: 20.020075
+Training: 2025-05-28 06:05:12,747-[cplfw][6930]Accuracy-Flip: 0.69483+-0.01521
+Training: 2025-05-28 06:05:12,747-[cplfw][6930]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:05:19,782-Speed 44.92 samples/sec   Loss 7.5555 Epoch: 18   Global Step: 6950   Required: 2 hours
+Training: 2025-05-28 06:05:37,007-Speed 371.56 samples/sec   Loss 6.1054 Epoch: 18   Global Step: 7000   Required: 2 hours
+Training: 2025-05-28 06:05:54,236-Speed 371.46 samples/sec   Loss 6.3382 Epoch: 18   Global Step: 7050   Required: 2 hours
+Training: 2025-05-28 06:06:11,473-Speed 371.30 samples/sec   Loss 6.7969 Epoch: 18   Global Step: 7100   Required: 2 hours
+Training: 2025-05-28 06:06:28,715-Speed 371.20 samples/sec   Loss 7.2349 Epoch: 18   Global Step: 7150   Required: 2 hours
+Training: 2025-05-28 06:06:45,956-Speed 371.20 samples/sec   Loss 7.4454 Epoch: 18   Global Step: 7200   Required: 2 hours
+Training: 2025-05-28 06:07:03,197-Speed 371.21 samples/sec   Loss 7.8335 Epoch: 18   Global Step: 7250   Required: 1 hours
+Training: 2025-05-28 06:07:20,443-Speed 371.11 samples/sec   Loss 8.1132 Epoch: 18   Global Step: 7300   Required: 1 hours
+Training: 2025-05-28 06:07:49,785-[lfw][7315]XNorm: 21.809898
+Training: 2025-05-28 06:07:49,785-[lfw][7315]Accuracy-Flip: 0.92833+-0.01043
+Training: 2025-05-28 06:07:49,785-[lfw][7315]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:08:17,982-[cfp_fp][7315]XNorm: 19.086358
+Training: 2025-05-28 06:08:17,982-[cfp_fp][7315]Accuracy-Flip: 0.74057+-0.02237
+Training: 2025-05-28 06:08:17,983-[cfp_fp][7315]Accuracy-Highest: 0.74057
+Training: 2025-05-28 06:08:42,151-[agedb_30][7315]XNorm: 19.508806
+Training: 2025-05-28 06:08:42,152-[agedb_30][7315]Accuracy-Flip: 0.74200+-0.01660
+Training: 2025-05-28 06:08:42,152-[agedb_30][7315]Accuracy-Highest: 0.74717
+Training: 2025-05-28 06:09:06,414-[calfw][7315]XNorm: 21.747184
+Training: 2025-05-28 06:09:06,414-[calfw][7315]Accuracy-Flip: 0.80083+-0.01300
+Training: 2025-05-28 06:09:06,414-[calfw][7315]Accuracy-Highest: 0.80617
+Training: 2025-05-28 06:09:30,660-[cplfw][7315]XNorm: 19.567270
+Training: 2025-05-28 06:09:30,660-[cplfw][7315]Accuracy-Flip: 0.68917+-0.01934
+Training: 2025-05-28 06:09:30,660-[cplfw][7315]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:09:42,885-Speed 44.93 samples/sec   Loss 6.2061 Epoch: 19   Global Step: 7350   Required: 2 hours
+Training: 2025-05-28 06:10:00,114-Speed 371.48 samples/sec   Loss 5.8109 Epoch: 19   Global Step: 7400   Required: 1 hours
+Training: 2025-05-28 06:10:17,348-Speed 371.35 samples/sec   Loss 6.0197 Epoch: 19   Global Step: 7450   Required: 1 hours
+Training: 2025-05-28 06:10:34,588-Speed 371.24 samples/sec   Loss 6.3483 Epoch: 19   Global Step: 7500   Required: 1 hours
+Training: 2025-05-28 06:10:51,828-Speed 371.21 samples/sec   Loss 6.8060 Epoch: 19   Global Step: 7550   Required: 1 hours
+Training: 2025-05-28 06:11:09,070-Speed 371.20 samples/sec   Loss 7.0824 Epoch: 19   Global Step: 7600   Required: 1 hours
+Training: 2025-05-28 06:11:26,316-Speed 371.10 samples/sec   Loss 7.3024 Epoch: 19   Global Step: 7650   Required: 1 hours
+Training: 2025-05-28 06:11:43,559-Speed 371.17 samples/sec   Loss 7.7143 Epoch: 19   Global Step: 7700   Required: 1 hours
+Training: 2025-05-28 06:12:07,759-[lfw][7700]XNorm: 21.478174
+Training: 2025-05-28 06:12:07,759-[lfw][7700]Accuracy-Flip: 0.92117+-0.01606
+Training: 2025-05-28 06:12:07,759-[lfw][7700]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:12:35,902-[cfp_fp][7700]XNorm: 18.876599
+Training: 2025-05-28 06:12:35,902-[cfp_fp][7700]Accuracy-Flip: 0.74157+-0.02800
+Training: 2025-05-28 06:12:35,902-[cfp_fp][7700]Accuracy-Highest: 0.74157
+Training: 2025-05-28 06:13:00,079-[agedb_30][7700]XNorm: 19.066179
+Training: 2025-05-28 06:13:00,079-[agedb_30][7700]Accuracy-Flip: 0.73850+-0.02249
+Training: 2025-05-28 06:13:00,079-[agedb_30][7700]Accuracy-Highest: 0.74717
+Training: 2025-05-28 06:13:24,359-[calfw][7700]XNorm: 21.474691
+Training: 2025-05-28 06:13:24,359-[calfw][7700]Accuracy-Flip: 0.79667+-0.01278
+Training: 2025-05-28 06:13:24,359-[calfw][7700]Accuracy-Highest: 0.80617
+Training: 2025-05-28 06:13:48,804-[cplfw][7700]XNorm: 19.149999
+Training: 2025-05-28 06:13:48,804-[cplfw][7700]Accuracy-Flip: 0.68283+-0.01436
+Training: 2025-05-28 06:13:48,804-[cplfw][7700]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:14:06,178-Speed 44.87 samples/sec   Loss 4.9988 Epoch: 20   Global Step: 7750   Required: 1 hours
+Training: 2025-05-28 06:14:23,416-Speed 371.29 samples/sec   Loss 5.2931 Epoch: 20   Global Step: 7800   Required: 1 hours
+Training: 2025-05-28 06:14:40,654-Speed 371.28 samples/sec   Loss 5.8224 Epoch: 20   Global Step: 7850   Required: 1 hours
+Training: 2025-05-28 06:14:57,898-Speed 371.13 samples/sec   Loss 6.1264 Epoch: 20   Global Step: 7900   Required: 1 hours
+Training: 2025-05-28 06:15:15,141-Speed 371.16 samples/sec   Loss 6.3575 Epoch: 20   Global Step: 7950   Required: 1 hours
+Training: 2025-05-28 06:15:32,386-Speed 371.14 samples/sec   Loss 6.6818 Epoch: 20   Global Step: 8000   Required: 1 hours
+Training: 2025-05-28 06:15:49,631-Speed 371.11 samples/sec   Loss 7.0931 Epoch: 20   Global Step: 8050   Required: 1 hours
+Training: 2025-05-28 06:16:25,871-[lfw][8085]XNorm: 22.086299
+Training: 2025-05-28 06:16:25,871-[lfw][8085]Accuracy-Flip: 0.92517+-0.01305
+Training: 2025-05-28 06:16:25,872-[lfw][8085]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:16:53,980-[cfp_fp][8085]XNorm: 19.385568
+Training: 2025-05-28 06:16:53,980-[cfp_fp][8085]Accuracy-Flip: 0.73057+-0.02503
+Training: 2025-05-28 06:16:53,980-[cfp_fp][8085]Accuracy-Highest: 0.74157
+Training: 2025-05-28 06:17:18,158-[agedb_30][8085]XNorm: 19.756492
+Training: 2025-05-28 06:17:18,158-[agedb_30][8085]Accuracy-Flip: 0.74367+-0.02341
+Training: 2025-05-28 06:17:18,158-[agedb_30][8085]Accuracy-Highest: 0.74717
+Training: 2025-05-28 06:17:42,422-[calfw][8085]XNorm: 22.115675
+Training: 2025-05-28 06:17:42,422-[calfw][8085]Accuracy-Flip: 0.80217+-0.01220
+Training: 2025-05-28 06:17:42,422-[calfw][8085]Accuracy-Highest: 0.80617
+Training: 2025-05-28 06:18:06,682-[cplfw][8085]XNorm: 19.736934
+Training: 2025-05-28 06:18:06,682-[cplfw][8085]Accuracy-Flip: 0.69600+-0.01530
+Training: 2025-05-28 06:18:06,682-[cplfw][8085]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:18:12,024-Speed 44.95 samples/sec   Loss 6.3105 Epoch: 21   Global Step: 8100   Required: 1 hours
+Training: 2025-05-28 06:18:29,283-Speed 371.46 samples/sec   Loss 4.0174 Epoch: 21   Global Step: 8150   Required: 1 hours
+Training: 2025-05-28 06:18:46,518-Speed 371.34 samples/sec   Loss 3.8422 Epoch: 21   Global Step: 8200   Required: 1 hours
+Training: 2025-05-28 06:19:03,758-Speed 371.23 samples/sec   Loss 3.6310 Epoch: 21   Global Step: 8250   Required: 1 hours
+Training: 2025-05-28 06:19:21,003-Speed 371.12 samples/sec   Loss 3.4678 Epoch: 21   Global Step: 8300   Required: 1 hours
+Training: 2025-05-28 06:19:38,251-Speed 371.06 samples/sec   Loss 3.4635 Epoch: 21   Global Step: 8350   Required: 1 hours
+Training: 2025-05-28 06:19:55,503-Speed 370.98 samples/sec   Loss 3.3655 Epoch: 21   Global Step: 8400   Required: 1 hours
+Training: 2025-05-28 06:20:12,750-Speed 371.07 samples/sec   Loss 3.3451 Epoch: 21   Global Step: 8450   Required: 1 hours
+Training: 2025-05-28 06:20:43,848-[lfw][8470]XNorm: 21.166048
+Training: 2025-05-28 06:20:43,849-[lfw][8470]Accuracy-Flip: 0.93117+-0.01245
+Training: 2025-05-28 06:20:43,849-[lfw][8470]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:21:12,079-[cfp_fp][8470]XNorm: 18.661921
+Training: 2025-05-28 06:21:12,080-[cfp_fp][8470]Accuracy-Flip: 0.73786+-0.01816
+Training: 2025-05-28 06:21:12,080-[cfp_fp][8470]Accuracy-Highest: 0.74157
+Training: 2025-05-28 06:21:36,270-[agedb_30][8470]XNorm: 19.065258
+Training: 2025-05-28 06:21:36,270-[agedb_30][8470]Accuracy-Flip: 0.75100+-0.02144
+Training: 2025-05-28 06:21:36,270-[agedb_30][8470]Accuracy-Highest: 0.75100
+Training: 2025-05-28 06:22:00,540-[calfw][8470]XNorm: 21.234206
+Training: 2025-05-28 06:22:00,540-[calfw][8470]Accuracy-Flip: 0.80600+-0.01214
+Training: 2025-05-28 06:22:00,540-[calfw][8470]Accuracy-Highest: 0.80617
+Training: 2025-05-28 06:22:24,813-[cplfw][8470]XNorm: 18.887277
+Training: 2025-05-28 06:22:24,813-[cplfw][8470]Accuracy-Flip: 0.70200+-0.01972
+Training: 2025-05-28 06:22:24,813-[cplfw][8470]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:22:35,296-Speed 44.90 samples/sec   Loss 2.9842 Epoch: 22   Global Step: 8500   Required: 1 hours
+Training: 2025-05-28 06:22:52,534-Speed 371.28 samples/sec   Loss 2.7454 Epoch: 22   Global Step: 8550   Required: 1 hours
+Training: 2025-05-28 06:23:09,773-Speed 371.25 samples/sec   Loss 2.8629 Epoch: 22   Global Step: 8600   Required: 1 hours
+Training: 2025-05-28 06:23:27,019-Speed 371.10 samples/sec   Loss 2.8462 Epoch: 22   Global Step: 8650   Required: 1 hours
+Training: 2025-05-28 06:23:44,266-Speed 371.08 samples/sec   Loss 2.6505 Epoch: 22   Global Step: 8700   Required: 1 hours
+Training: 2025-05-28 06:24:01,510-Speed 371.15 samples/sec   Loss 2.6980 Epoch: 22   Global Step: 8750   Required: 1 hours
+Training: 2025-05-28 06:24:18,758-Speed 371.06 samples/sec   Loss 2.7709 Epoch: 22   Global Step: 8800   Required: 1 hours
+Training: 2025-05-28 06:24:36,009-Speed 370.99 samples/sec   Loss 2.6902 Epoch: 22   Global Step: 8850   Required: 1 hours
+Training: 2025-05-28 06:25:01,930-[lfw][8855]XNorm: 21.030635
+Training: 2025-05-28 06:25:01,931-[lfw][8855]Accuracy-Flip: 0.92750+-0.01265
+Training: 2025-05-28 06:25:01,931-[lfw][8855]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:25:30,110-[cfp_fp][8855]XNorm: 18.517897
+Training: 2025-05-28 06:25:30,110-[cfp_fp][8855]Accuracy-Flip: 0.73529+-0.02021
+Training: 2025-05-28 06:25:30,110-[cfp_fp][8855]Accuracy-Highest: 0.74157
+Training: 2025-05-28 06:25:54,279-[agedb_30][8855]XNorm: 19.003759
+Training: 2025-05-28 06:25:54,279-[agedb_30][8855]Accuracy-Flip: 0.74600+-0.02809
+Training: 2025-05-28 06:25:54,279-[agedb_30][8855]Accuracy-Highest: 0.75100
+Training: 2025-05-28 06:26:18,552-[calfw][8855]XNorm: 21.077895
+Training: 2025-05-28 06:26:18,552-[calfw][8855]Accuracy-Flip: 0.81167+-0.01265
+Training: 2025-05-28 06:26:18,552-[calfw][8855]Accuracy-Highest: 0.81167
+Training: 2025-05-28 06:26:42,834-[cplfw][8855]XNorm: 18.806008
+Training: 2025-05-28 06:26:42,834-[cplfw][8855]Accuracy-Flip: 0.69583+-0.01223
+Training: 2025-05-28 06:26:42,834-[cplfw][8855]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:26:58,514-Speed 44.91 samples/sec   Loss 2.2765 Epoch: 23   Global Step: 8900   Required: 1 hours
+Training: 2025-05-28 06:27:15,750-Speed 371.32 samples/sec   Loss 2.2905 Epoch: 23   Global Step: 8950   Required: 1 hours
+Training: 2025-05-28 06:27:32,990-Speed 371.22 samples/sec   Loss 2.1918 Epoch: 23   Global Step: 9000   Required: 1 hours
+Training: 2025-05-28 06:27:50,234-Speed 371.14 samples/sec   Loss 2.2532 Epoch: 23   Global Step: 9050   Required: 1 hours
+Training: 2025-05-28 06:28:07,481-Speed 371.08 samples/sec   Loss 2.3404 Epoch: 23   Global Step: 9100   Required: 1 hours
+Training: 2025-05-28 06:28:24,729-Speed 371.06 samples/sec   Loss 2.2278 Epoch: 23   Global Step: 9150   Required: 1 hours
+Training: 2025-05-28 06:28:41,974-Speed 371.14 samples/sec   Loss 2.2133 Epoch: 23   Global Step: 9200   Required: 1 hours
+Training: 2025-05-28 06:29:19,949-[lfw][9240]XNorm: 20.933550
+Training: 2025-05-28 06:29:19,949-[lfw][9240]Accuracy-Flip: 0.92433+-0.01212
+Training: 2025-05-28 06:29:19,949-[lfw][9240]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:29:48,106-[cfp_fp][9240]XNorm: 18.438825
+Training: 2025-05-28 06:29:48,106-[cfp_fp][9240]Accuracy-Flip: 0.73757+-0.01639
+Training: 2025-05-28 06:29:48,106-[cfp_fp][9240]Accuracy-Highest: 0.74157
+Training: 2025-05-28 06:30:12,280-[agedb_30][9240]XNorm: 18.953432
+Training: 2025-05-28 06:30:12,280-[agedb_30][9240]Accuracy-Flip: 0.74633+-0.02621
+Training: 2025-05-28 06:30:12,280-[agedb_30][9240]Accuracy-Highest: 0.75100
+Training: 2025-05-28 06:30:36,546-[calfw][9240]XNorm: 20.982971
+Training: 2025-05-28 06:30:36,546-[calfw][9240]Accuracy-Flip: 0.80867+-0.01398
+Training: 2025-05-28 06:30:36,546-[calfw][9240]Accuracy-Highest: 0.81167
+Training: 2025-05-28 06:31:00,822-[cplfw][9240]XNorm: 18.730339
+Training: 2025-05-28 06:31:00,822-[cplfw][9240]Accuracy-Flip: 0.69667+-0.01821
+Training: 2025-05-28 06:31:00,822-[cplfw][9240]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:31:04,439-Speed 44.92 samples/sec   Loss 2.2048 Epoch: 24   Global Step: 9250   Required: 1 hours
+Training: 2025-05-28 06:31:21,673-Speed 371.35 samples/sec   Loss 1.8736 Epoch: 24   Global Step: 9300   Required: 1 hours
+Training: 2025-05-28 06:31:38,916-Speed 371.17 samples/sec   Loss 1.8851 Epoch: 24   Global Step: 9350   Required: 1 hours
+Training: 2025-05-28 06:31:56,161-Speed 371.13 samples/sec   Loss 1.9074 Epoch: 24   Global Step: 9400   Required: 1 hours
+Training: 2025-05-28 06:32:13,405-Speed 371.14 samples/sec   Loss 1.8417 Epoch: 24   Global Step: 9450   Required: 1 hours
+Training: 2025-05-28 06:32:30,653-Speed 371.06 samples/sec   Loss 1.8591 Epoch: 24   Global Step: 9500   Required: 1 hours
+Training: 2025-05-28 06:32:47,905-Speed 370.97 samples/sec   Loss 1.8629 Epoch: 24   Global Step: 9550   Required: 1 hours
+Training: 2025-05-28 06:33:05,155-Speed 371.02 samples/sec   Loss 1.9632 Epoch: 24   Global Step: 9600   Required: 1 hours
+Training: 2025-05-28 06:33:37,970-[lfw][9625]XNorm: 21.139654
+Training: 2025-05-28 06:33:37,970-[lfw][9625]Accuracy-Flip: 0.92767+-0.01261
+Training: 2025-05-28 06:33:37,970-[lfw][9625]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:34:06,082-[cfp_fp][9625]XNorm: 18.637481
+Training: 2025-05-28 06:34:06,082-[cfp_fp][9625]Accuracy-Flip: 0.73243+-0.01835
+Training: 2025-05-28 06:34:06,082-[cfp_fp][9625]Accuracy-Highest: 0.74157
+Training: 2025-05-28 06:34:30,271-[agedb_30][9625]XNorm: 19.118819
+Training: 2025-05-28 06:34:30,271-[agedb_30][9625]Accuracy-Flip: 0.75367+-0.02630
+Training: 2025-05-28 06:34:30,271-[agedb_30][9625]Accuracy-Highest: 0.75367
+Training: 2025-05-28 06:34:54,545-[calfw][9625]XNorm: 21.188197
+Training: 2025-05-28 06:34:54,545-[calfw][9625]Accuracy-Flip: 0.80667+-0.01306
+Training: 2025-05-28 06:34:54,545-[calfw][9625]Accuracy-Highest: 0.81167
+Training: 2025-05-28 06:35:18,802-[cplfw][9625]XNorm: 18.929737
+Training: 2025-05-28 06:35:18,802-[cplfw][9625]Accuracy-Flip: 0.69700+-0.01717
+Training: 2025-05-28 06:35:18,802-[cplfw][9625]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:35:27,583-Speed 44.93 samples/sec   Loss 1.8084 Epoch: 25   Global Step: 9650   Required: 1 hours
+Training: 2025-05-28 06:35:44,818-Speed 371.35 samples/sec   Loss 1.5083 Epoch: 25   Global Step: 9700   Required: 1 hours
+Training: 2025-05-28 06:36:02,057-Speed 371.26 samples/sec   Loss 1.5210 Epoch: 25   Global Step: 9750   Required: 1 hours
+Training: 2025-05-28 06:36:19,299-Speed 371.18 samples/sec   Loss 1.5851 Epoch: 25   Global Step: 9800   Required: 1 hours
+Training: 2025-05-28 06:36:36,544-Speed 371.13 samples/sec   Loss 1.5688 Epoch: 25   Global Step: 9850   Required: 1 hours
+Training: 2025-05-28 06:36:53,788-Speed 371.13 samples/sec   Loss 1.5998 Epoch: 25   Global Step: 9900   Required: 1 hours
+Training: 2025-05-28 06:37:11,035-Speed 371.09 samples/sec   Loss 1.6445 Epoch: 25   Global Step: 9950   Required: 1 hours
+Training: 2025-05-28 06:37:28,285-Speed 371.01 samples/sec   Loss 1.6983 Epoch: 25   Global Step: 10000   Required: 1 hours
+Training: 2025-05-28 06:37:55,980-[lfw][10010]XNorm: 20.910956
+Training: 2025-05-28 06:37:55,980-[lfw][10010]Accuracy-Flip: 0.92550+-0.01220
+Training: 2025-05-28 06:37:55,980-[lfw][10010]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:38:24,177-[cfp_fp][10010]XNorm: 18.492732
+Training: 2025-05-28 06:38:24,177-[cfp_fp][10010]Accuracy-Flip: 0.72614+-0.01733
+Training: 2025-05-28 06:38:24,177-[cfp_fp][10010]Accuracy-Highest: 0.74157
+Training: 2025-05-28 06:38:48,354-[agedb_30][10010]XNorm: 18.928274
+Training: 2025-05-28 06:38:48,354-[agedb_30][10010]Accuracy-Flip: 0.74267+-0.02937
+Training: 2025-05-28 06:38:48,354-[agedb_30][10010]Accuracy-Highest: 0.75367
+Training: 2025-05-28 06:39:12,632-[calfw][10010]XNorm: 20.950843
+Training: 2025-05-28 06:39:12,632-[calfw][10010]Accuracy-Flip: 0.80183+-0.01393
+Training: 2025-05-28 06:39:12,632-[calfw][10010]Accuracy-Highest: 0.81167
+Training: 2025-05-28 06:39:37,024-[cplfw][10010]XNorm: 18.732591
+Training: 2025-05-28 06:39:37,024-[cplfw][10010]Accuracy-Flip: 0.69700+-0.01631
+Training: 2025-05-28 06:39:37,024-[cplfw][10010]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:39:50,954-Speed 44.86 samples/sec   Loss 1.3679 Epoch: 26   Global Step: 10050   Required: 1 hours
+Training: 2025-05-28 06:40:08,182-Speed 371.48 samples/sec   Loss 1.3145 Epoch: 26   Global Step: 10100   Required: 1 hours
+Training: 2025-05-28 06:40:25,412-Speed 371.46 samples/sec   Loss 1.3586 Epoch: 26   Global Step: 10150   Required: 1 hours
+Training: 2025-05-28 06:40:42,647-Speed 371.34 samples/sec   Loss 1.3134 Epoch: 26   Global Step: 10200   Required: 1 hours
+Training: 2025-05-28 06:40:59,886-Speed 371.26 samples/sec   Loss 1.3420 Epoch: 26   Global Step: 10250   Required: 1 hours
+Training: 2025-05-28 06:41:17,127-Speed 371.19 samples/sec   Loss 1.3937 Epoch: 26   Global Step: 10300   Required: 1 hours
+Training: 2025-05-28 06:41:34,370-Speed 371.17 samples/sec   Loss 1.3787 Epoch: 26   Global Step: 10350   Required: 1 hours
+Training: 2025-05-28 06:42:14,077-[lfw][10395]XNorm: 20.790353
+Training: 2025-05-28 06:42:14,077-[lfw][10395]Accuracy-Flip: 0.92383+-0.01459
+Training: 2025-05-28 06:42:14,077-[lfw][10395]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:42:42,192-[cfp_fp][10395]XNorm: 18.425497
+Training: 2025-05-28 06:42:42,192-[cfp_fp][10395]Accuracy-Flip: 0.72671+-0.01849
+Training: 2025-05-28 06:42:42,192-[cfp_fp][10395]Accuracy-Highest: 0.74157
+Training: 2025-05-28 06:43:06,370-[agedb_30][10395]XNorm: 18.883918
+Training: 2025-05-28 06:43:06,370-[agedb_30][10395]Accuracy-Flip: 0.73967+-0.02963
+Training: 2025-05-28 06:43:06,371-[agedb_30][10395]Accuracy-Highest: 0.75367
+Training: 2025-05-28 06:43:30,639-[calfw][10395]XNorm: 20.864830
+Training: 2025-05-28 06:43:30,639-[calfw][10395]Accuracy-Flip: 0.80117+-0.01424
+Training: 2025-05-28 06:43:30,639-[calfw][10395]Accuracy-Highest: 0.81167
+Training: 2025-05-28 06:43:54,900-[cplfw][10395]XNorm: 18.653517
+Training: 2025-05-28 06:43:54,900-[cplfw][10395]Accuracy-Flip: 0.69000+-0.01372
+Training: 2025-05-28 06:43:54,900-[cplfw][10395]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:43:56,789-Speed 44.94 samples/sec   Loss 1.3835 Epoch: 27   Global Step: 10400   Required: 1 hours
+Training: 2025-05-28 06:44:14,024-Speed 371.33 samples/sec   Loss 1.0559 Epoch: 27   Global Step: 10450   Required: 1 hours
+Training: 2025-05-28 06:44:31,261-Speed 371.30 samples/sec   Loss 1.0870 Epoch: 27   Global Step: 10500   Required: 1 hours
+Training: 2025-05-28 06:44:48,504-Speed 371.17 samples/sec   Loss 1.1160 Epoch: 27   Global Step: 10550   Required: 1 hours
+Training: 2025-05-28 06:45:05,746-Speed 371.20 samples/sec   Loss 1.1415 Epoch: 27   Global Step: 10600   Required: 1 hours
+Training: 2025-05-28 06:45:22,988-Speed 371.19 samples/sec   Loss 1.2002 Epoch: 27   Global Step: 10650   Required: 1 hours
+Training: 2025-05-28 06:45:40,231-Speed 371.17 samples/sec   Loss 1.2118 Epoch: 27   Global Step: 10700   Required: 1 hours
+Training: 2025-05-28 06:45:57,478-Speed 371.08 samples/sec   Loss 1.1534 Epoch: 27   Global Step: 10750   Required: 1 hours
+Training: 2025-05-28 06:46:32,004-[lfw][10780]XNorm: 20.865038
+Training: 2025-05-28 06:46:32,005-[lfw][10780]Accuracy-Flip: 0.91867+-0.01496
+Training: 2025-05-28 06:46:32,005-[lfw][10780]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:47:00,276-[cfp_fp][10780]XNorm: 18.459659
+Training: 2025-05-28 06:47:00,276-[cfp_fp][10780]Accuracy-Flip: 0.73243+-0.01245
+Training: 2025-05-28 06:47:00,276-[cfp_fp][10780]Accuracy-Highest: 0.74157
+Training: 2025-05-28 06:47:24,459-[agedb_30][10780]XNorm: 18.952571
+Training: 2025-05-28 06:47:24,459-[agedb_30][10780]Accuracy-Flip: 0.74733+-0.02187
+Training: 2025-05-28 06:47:24,459-[agedb_30][10780]Accuracy-Highest: 0.75367
+Training: 2025-05-28 06:47:48,735-[calfw][10780]XNorm: 20.925757
+Training: 2025-05-28 06:47:48,736-[calfw][10780]Accuracy-Flip: 0.80100+-0.01359
+Training: 2025-05-28 06:47:48,736-[calfw][10780]Accuracy-Highest: 0.81167
+Training: 2025-05-28 06:48:13,015-[cplfw][10780]XNorm: 18.721098
+Training: 2025-05-28 06:48:13,015-[cplfw][10780]Accuracy-Flip: 0.69450+-0.01560
+Training: 2025-05-28 06:48:13,015-[cplfw][10780]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:48:20,037-Speed 44.89 samples/sec   Loss 1.1144 Epoch: 28   Global Step: 10800   Required: 1 hours
+Training: 2025-05-28 06:48:37,272-Speed 371.34 samples/sec   Loss 0.9198 Epoch: 28   Global Step: 10850   Required: 1 hours
+Training: 2025-05-28 06:48:54,514-Speed 371.20 samples/sec   Loss 0.9928 Epoch: 28   Global Step: 10900   Required: 1 hours
+Training: 2025-05-28 06:49:11,762-Speed 371.05 samples/sec   Loss 0.9703 Epoch: 28   Global Step: 10950   Required: 1 hours
+Training: 2025-05-28 06:49:29,009-Speed 371.07 samples/sec   Loss 0.9830 Epoch: 28   Global Step: 11000   Required: 1 hours
+Training: 2025-05-28 06:49:46,264-Speed 370.91 samples/sec   Loss 1.0028 Epoch: 28   Global Step: 11050   Required: 1 hours
+Training: 2025-05-28 06:50:03,514-Speed 371.02 samples/sec   Loss 0.9979 Epoch: 28   Global Step: 11100   Required: 1 hours
+Training: 2025-05-28 06:50:20,769-Speed 370.91 samples/sec   Loss 0.9556 Epoch: 28   Global Step: 11150   Required: 1 hours
+Training: 2025-05-28 06:50:50,134-[lfw][11165]XNorm: 20.566680
+Training: 2025-05-28 06:50:50,134-[lfw][11165]Accuracy-Flip: 0.92167+-0.01297
+Training: 2025-05-28 06:50:50,134-[lfw][11165]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:51:18,267-[cfp_fp][11165]XNorm: 18.261849
+Training: 2025-05-28 06:51:18,267-[cfp_fp][11165]Accuracy-Flip: 0.73186+-0.01661
+Training: 2025-05-28 06:51:18,267-[cfp_fp][11165]Accuracy-Highest: 0.74157
+Training: 2025-05-28 06:51:42,453-[agedb_30][11165]XNorm: 18.695267
+Training: 2025-05-28 06:51:42,454-[agedb_30][11165]Accuracy-Flip: 0.74650+-0.02643
+Training: 2025-05-28 06:51:42,454-[agedb_30][11165]Accuracy-Highest: 0.75367
+Training: 2025-05-28 06:52:06,731-[calfw][11165]XNorm: 20.668381
+Training: 2025-05-28 06:52:06,731-[calfw][11165]Accuracy-Flip: 0.80117+-0.01551
+Training: 2025-05-28 06:52:06,731-[calfw][11165]Accuracy-Highest: 0.81167
+Training: 2025-05-28 06:52:31,063-[cplfw][11165]XNorm: 18.465089
+Training: 2025-05-28 06:52:31,063-[cplfw][11165]Accuracy-Flip: 0.68983+-0.01409
+Training: 2025-05-28 06:52:31,063-[cplfw][11165]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:52:43,300-Speed 44.90 samples/sec   Loss 0.8081 Epoch: 29   Global Step: 11200   Required: 1 hours
+Training: 2025-05-28 06:53:00,544-Speed 371.15 samples/sec   Loss 0.7289 Epoch: 29   Global Step: 11250   Required: 1 hours
+Training: 2025-05-28 06:53:17,787-Speed 371.18 samples/sec   Loss 0.7833 Epoch: 29   Global Step: 11300   Required: 1 hours
+Training: 2025-05-28 06:53:35,032-Speed 371.12 samples/sec   Loss 0.7877 Epoch: 29   Global Step: 11350   Required: 1 hours
+Training: 2025-05-28 06:53:52,284-Speed 370.96 samples/sec   Loss 0.7445 Epoch: 29   Global Step: 11400   Required: 1 hours
+Training: 2025-05-28 06:54:09,536-Speed 370.97 samples/sec   Loss 0.7237 Epoch: 29   Global Step: 11450   Required: 1 hours
+Training: 2025-05-28 06:54:26,786-Speed 371.02 samples/sec   Loss 0.7911 Epoch: 29   Global Step: 11500   Required: 1 hours
+Training: 2025-05-28 06:54:44,034-Speed 371.07 samples/sec   Loss 0.7104 Epoch: 29   Global Step: 11550   Required: 1 hours
+Training: 2025-05-28 06:55:08,241-[lfw][11550]XNorm: 20.897890
+Training: 2025-05-28 06:55:08,241-[lfw][11550]Accuracy-Flip: 0.92350+-0.01419
+Training: 2025-05-28 06:55:08,241-[lfw][11550]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:55:36,378-[cfp_fp][11550]XNorm: 18.506757
+Training: 2025-05-28 06:55:36,379-[cfp_fp][11550]Accuracy-Flip: 0.73443+-0.01519
+Training: 2025-05-28 06:55:36,379-[cfp_fp][11550]Accuracy-Highest: 0.74157
+Training: 2025-05-28 06:56:00,574-[agedb_30][11550]XNorm: 18.977210
+Training: 2025-05-28 06:56:00,574-[agedb_30][11550]Accuracy-Flip: 0.74983+-0.02675
+Training: 2025-05-28 06:56:00,574-[agedb_30][11550]Accuracy-Highest: 0.75367
+Training: 2025-05-28 06:56:24,863-[calfw][11550]XNorm: 20.972715
+Training: 2025-05-28 06:56:24,863-[calfw][11550]Accuracy-Flip: 0.80333+-0.01524
+Training: 2025-05-28 06:56:24,863-[calfw][11550]Accuracy-Highest: 0.81167
+Training: 2025-05-28 06:56:49,142-[cplfw][11550]XNorm: 18.752274
+Training: 2025-05-28 06:56:49,142-[cplfw][11550]Accuracy-Flip: 0.69517+-0.01519
+Training: 2025-05-28 06:56:49,142-[cplfw][11550]Accuracy-Highest: 0.70267
+Training: 2025-05-28 06:57:06,522-Speed 44.92 samples/sec   Loss 0.6980 Epoch: 30   Global Step: 11600   Required: 1 hours
+Training: 2025-05-28 06:57:23,777-Speed 370.91 samples/sec   Loss 0.7060 Epoch: 30   Global Step: 11650   Required: 1 hours
+Training: 2025-05-28 06:57:41,030-Speed 370.96 samples/sec   Loss 0.7354 Epoch: 30   Global Step: 11700   Required: 1 hours
+Training: 2025-05-28 06:57:58,287-Speed 370.87 samples/sec   Loss 0.6815 Epoch: 30   Global Step: 11750   Required: 1 hours
+Training: 2025-05-28 06:58:15,547-Speed 370.81 samples/sec   Loss 0.7061 Epoch: 30   Global Step: 11800   Required: 1 hours
+Training: 2025-05-28 06:58:32,809-Speed 370.76 samples/sec   Loss 0.7041 Epoch: 30   Global Step: 11850   Required: 1 hours
+Training: 2025-05-28 06:58:50,066-Speed 370.86 samples/sec   Loss 0.7067 Epoch: 30   Global Step: 11900   Required: 1 hours
+Training: 2025-05-28 06:59:26,351-[lfw][11935]XNorm: 20.717086
+Training: 2025-05-28 06:59:26,351-[lfw][11935]Accuracy-Flip: 0.92367+-0.01217
+Training: 2025-05-28 06:59:26,351-[lfw][11935]Accuracy-Highest: 0.93117
+Training: 2025-05-28 06:59:54,542-[cfp_fp][11935]XNorm: 18.371908
+Training: 2025-05-28 06:59:54,542-[cfp_fp][11935]Accuracy-Flip: 0.73457+-0.01411
+Training: 2025-05-28 06:59:54,542-[cfp_fp][11935]Accuracy-Highest: 0.74157
+Training: 2025-05-28 07:00:18,738-[agedb_30][11935]XNorm: 18.806101
+Training: 2025-05-28 07:00:18,738-[agedb_30][11935]Accuracy-Flip: 0.74900+-0.02659
+Training: 2025-05-28 07:00:18,738-[agedb_30][11935]Accuracy-Highest: 0.75367
+Training: 2025-05-28 07:00:43,033-[calfw][11935]XNorm: 20.795022
+Training: 2025-05-28 07:00:43,033-[calfw][11935]Accuracy-Flip: 0.80483+-0.01700
+Training: 2025-05-28 07:00:43,033-[calfw][11935]Accuracy-Highest: 0.81167
+Training: 2025-05-28 07:01:07,308-[cplfw][11935]XNorm: 18.596902
+Training: 2025-05-28 07:01:07,308-[cplfw][11935]Accuracy-Flip: 0.69383+-0.01317
+Training: 2025-05-28 07:01:07,308-[cplfw][11935]Accuracy-Highest: 0.70267
+Training: 2025-05-28 07:01:12,643-Speed 44.89 samples/sec   Loss 0.7166 Epoch: 31   Global Step: 11950   Required: 1 hours
+Training: 2025-05-28 07:01:29,888-Speed 371.13 samples/sec   Loss 0.6966 Epoch: 31   Global Step: 12000   Required: 1 hours
+Training: 2025-05-28 07:01:47,130-Speed 371.18 samples/sec   Loss 0.6766 Epoch: 31   Global Step: 12050   Required: 1 hours
+Training: 2025-05-28 07:02:04,384-Speed 370.94 samples/sec   Loss 0.6846 Epoch: 31   Global Step: 12100   Required: 1 hours
+Training: 2025-05-28 07:02:21,639-Speed 370.91 samples/sec   Loss 0.6989 Epoch: 31   Global Step: 12150   Required: 1 hours
+Training: 2025-05-28 07:02:38,895-Speed 370.89 samples/sec   Loss 0.7242 Epoch: 31   Global Step: 12200   Required: 1 hours
+Training: 2025-05-28 07:02:56,151-Speed 370.88 samples/sec   Loss 0.6541 Epoch: 31   Global Step: 12250   Required: 1 hours
+Training: 2025-05-28 07:03:13,409-Speed 370.85 samples/sec   Loss 0.6744 Epoch: 31   Global Step: 12300   Required: 1 hours
+Training: 2025-05-28 07:03:44,513-[lfw][12320]XNorm: 20.702500
+Training: 2025-05-28 07:03:44,513-[lfw][12320]Accuracy-Flip: 0.92083+-0.01379
+Training: 2025-05-28 07:03:44,513-[lfw][12320]Accuracy-Highest: 0.93117
+Training: 2025-05-28 07:04:12,726-[cfp_fp][12320]XNorm: 18.348856
+Training: 2025-05-28 07:04:12,726-[cfp_fp][12320]Accuracy-Flip: 0.73171+-0.01423
+Training: 2025-05-28 07:04:12,726-[cfp_fp][12320]Accuracy-Highest: 0.74157
+Training: 2025-05-28 07:04:36,915-[agedb_30][12320]XNorm: 18.799959
+Training: 2025-05-28 07:04:36,915-[agedb_30][12320]Accuracy-Flip: 0.74583+-0.02545
+Training: 2025-05-28 07:04:36,915-[agedb_30][12320]Accuracy-Highest: 0.75367
+Training: 2025-05-28 07:05:01,199-[calfw][12320]XNorm: 20.768484
+Training: 2025-05-28 07:05:01,199-[calfw][12320]Accuracy-Flip: 0.80183+-0.01733
+Training: 2025-05-28 07:05:01,199-[calfw][12320]Accuracy-Highest: 0.81167
+Training: 2025-05-28 07:05:25,471-[cplfw][12320]XNorm: 18.585155
+Training: 2025-05-28 07:05:25,471-[cplfw][12320]Accuracy-Flip: 0.69833+-0.01451
+Training: 2025-05-28 07:05:25,471-[cplfw][12320]Accuracy-Highest: 0.70267
+Training: 2025-05-28 07:05:35,976-Speed 44.89 samples/sec   Loss 0.6843 Epoch: 32   Global Step: 12350   Required: 1 hours
+Training: 2025-05-28 07:05:53,227-Speed 371.00 samples/sec   Loss 0.6519 Epoch: 32   Global Step: 12400   Required: 1 hours
+Training: 2025-05-28 07:06:10,478-Speed 371.00 samples/sec   Loss 0.6436 Epoch: 32   Global Step: 12450   Required: 1 hours
+Training: 2025-05-28 07:06:27,730-Speed 370.98 samples/sec   Loss 0.6667 Epoch: 32   Global Step: 12500   Required: 1 hours
+Training: 2025-05-28 07:06:44,982-Speed 370.96 samples/sec   Loss 0.6324 Epoch: 32   Global Step: 12550   Required: 1 hours
+Training: 2025-05-28 07:07:02,240-Speed 370.86 samples/sec   Loss 0.6867 Epoch: 32   Global Step: 12600   Required: 1 hours
+Training: 2025-05-28 07:07:19,498-Speed 370.85 samples/sec   Loss 0.6625 Epoch: 32   Global Step: 12650   Required: 1 hours
+Training: 2025-05-28 07:07:36,758-Speed 370.79 samples/sec   Loss 0.6601 Epoch: 32   Global Step: 12700   Required: 1 hours
+Training: 2025-05-28 07:08:02,693-[lfw][12705]XNorm: 20.785778
+Training: 2025-05-28 07:08:02,693-[lfw][12705]Accuracy-Flip: 0.91900+-0.01346
+Training: 2025-05-28 07:08:02,693-[lfw][12705]Accuracy-Highest: 0.93117
+Training: 2025-05-28 07:08:30,816-[cfp_fp][12705]XNorm: 18.407162
+Training: 2025-05-28 07:08:30,817-[cfp_fp][12705]Accuracy-Flip: 0.73186+-0.01625
+Training: 2025-05-28 07:08:30,817-[cfp_fp][12705]Accuracy-Highest: 0.74157
+Training: 2025-05-28 07:08:55,011-[agedb_30][12705]XNorm: 18.895758
+Training: 2025-05-28 07:08:55,012-[agedb_30][12705]Accuracy-Flip: 0.74767+-0.02639
+Training: 2025-05-28 07:08:55,012-[agedb_30][12705]Accuracy-Highest: 0.75367
+Training: 2025-05-28 07:09:19,302-[calfw][12705]XNorm: 20.853797
+Training: 2025-05-28 07:09:19,302-[calfw][12705]Accuracy-Flip: 0.80433+-0.01623
+Training: 2025-05-28 07:09:19,302-[calfw][12705]Accuracy-Highest: 0.81167
+Training: 2025-05-28 07:09:43,571-[cplfw][12705]XNorm: 18.662781
+Training: 2025-05-28 07:09:43,571-[cplfw][12705]Accuracy-Flip: 0.69783+-0.01515
+Training: 2025-05-28 07:09:43,571-[cplfw][12705]Accuracy-Highest: 0.70267
+Training: 2025-05-28 07:09:59,253-Speed 44.91 samples/sec   Loss 0.6466 Epoch: 33   Global Step: 12750   Required: 0 hours
+Training: 2025-05-28 07:10:16,500-Speed 371.09 samples/sec   Loss 0.6367 Epoch: 33   Global Step: 12800   Required: 0 hours
+Training: 2025-05-28 07:10:33,748-Speed 371.06 samples/sec   Loss 0.6726 Epoch: 33   Global Step: 12850   Required: 0 hours
+Training: 2025-05-28 07:10:51,000-Speed 370.96 samples/sec   Loss 0.6544 Epoch: 33   Global Step: 12900   Required: 0 hours
+Training: 2025-05-28 07:11:08,260-Speed 370.81 samples/sec   Loss 0.6499 Epoch: 33   Global Step: 12950   Required: 0 hours
+Training: 2025-05-28 07:11:25,519-Speed 370.83 samples/sec   Loss 0.6348 Epoch: 33   Global Step: 13000   Required: 0 hours
+Training: 2025-05-28 07:11:42,776-Speed 370.86 samples/sec   Loss 0.6301 Epoch: 33   Global Step: 13050   Required: 0 hours
+Training: 2025-05-28 07:12:20,784-[lfw][13090]XNorm: 20.785961
+Training: 2025-05-28 07:12:20,784-[lfw][13090]Accuracy-Flip: 0.92200+-0.01449
+Training: 2025-05-28 07:12:20,784-[lfw][13090]Accuracy-Highest: 0.93117
+Training: 2025-05-28 07:12:49,014-[cfp_fp][13090]XNorm: 18.413629
+Training: 2025-05-28 07:12:49,015-[cfp_fp][13090]Accuracy-Flip: 0.73271+-0.01484
+Training: 2025-05-28 07:12:49,015-[cfp_fp][13090]Accuracy-Highest: 0.74157
+Training: 2025-05-28 07:13:13,202-[agedb_30][13090]XNorm: 18.874427
+Training: 2025-05-28 07:13:13,202-[agedb_30][13090]Accuracy-Flip: 0.74583+-0.02556
+Training: 2025-05-28 07:13:13,202-[agedb_30][13090]Accuracy-Highest: 0.75367
+Training: 2025-05-28 07:13:37,480-[calfw][13090]XNorm: 20.856384
+Training: 2025-05-28 07:13:37,481-[calfw][13090]Accuracy-Flip: 0.80667+-0.01606
+Training: 2025-05-28 07:13:37,481-[calfw][13090]Accuracy-Highest: 0.81167
+Training: 2025-05-28 07:14:01,754-[cplfw][13090]XNorm: 18.658988
+Training: 2025-05-28 07:14:01,754-[cplfw][13090]Accuracy-Flip: 0.69333+-0.01426
+Training: 2025-05-28 07:14:01,754-[cplfw][13090]Accuracy-Highest: 0.70267
+Training: 2025-05-28 07:14:05,363-Speed 44.89 samples/sec   Loss 0.5968 Epoch: 34   Global Step: 13100   Required: 0 hours
+Training: 2025-05-28 07:14:22,602-Speed 371.26 samples/sec   Loss 0.6224 Epoch: 34   Global Step: 13150   Required: 0 hours
+Training: 2025-05-28 07:14:39,845-Speed 371.16 samples/sec   Loss 0.5994 Epoch: 34   Global Step: 13200   Required: 0 hours
+Training: 2025-05-28 07:14:57,090-Speed 371.11 samples/sec   Loss 0.6378 Epoch: 34   Global Step: 13250   Required: 0 hours
+Training: 2025-05-28 07:15:14,343-Speed 370.96 samples/sec   Loss 0.6479 Epoch: 34   Global Step: 13300   Required: 0 hours
+Training: 2025-05-28 07:15:31,597-Speed 370.93 samples/sec   Loss 0.6043 Epoch: 34   Global Step: 13350   Required: 0 hours
+Training: 2025-05-28 07:15:48,850-Speed 370.95 samples/sec   Loss 0.6216 Epoch: 34   Global Step: 13400   Required: 0 hours
+Training: 2025-05-28 07:16:06,102-Speed 370.97 samples/sec   Loss 0.6416 Epoch: 34   Global Step: 13450   Required: 0 hours
+Training: 2025-05-28 07:16:38,931-[lfw][13475]XNorm: 20.761637
+Training: 2025-05-28 07:16:38,931-[lfw][13475]Accuracy-Flip: 0.92100+-0.01375
+Training: 2025-05-28 07:16:38,931-[lfw][13475]Accuracy-Highest: 0.93117
+Training: 2025-05-28 07:17:07,143-[cfp_fp][13475]XNorm: 18.383563
+Training: 2025-05-28 07:17:07,143-[cfp_fp][13475]Accuracy-Flip: 0.73329+-0.01404
+Training: 2025-05-28 07:17:07,143-[cfp_fp][13475]Accuracy-Highest: 0.74157
+Training: 2025-05-28 07:17:31,345-[agedb_30][13475]XNorm: 18.864692
+Training: 2025-05-28 07:17:31,345-[agedb_30][13475]Accuracy-Flip: 0.74383+-0.02619
+Training: 2025-05-28 07:17:31,345-[agedb_30][13475]Accuracy-Highest: 0.75367
+Training: 2025-05-28 07:17:55,648-[calfw][13475]XNorm: 20.836953
+Training: 2025-05-28 07:17:55,648-[calfw][13475]Accuracy-Flip: 0.80383+-0.01549
+Training: 2025-05-28 07:17:55,648-[calfw][13475]Accuracy-Highest: 0.81167
+Training: 2025-05-28 07:18:19,939-[cplfw][13475]XNorm: 18.641801
+Training: 2025-05-28 07:18:19,939-[cplfw][13475]Accuracy-Flip: 0.69617+-0.01665
+Training: 2025-05-28 07:18:19,939-[cplfw][13475]Accuracy-Highest: 0.70267
+Training: 2025-05-28 07:18:28,748-Speed 44.87 samples/sec   Loss 0.6107 Epoch: 35   Global Step: 13500   Required: 0 hours
+Training: 2025-05-28 07:18:45,993-Speed 371.13 samples/sec   Loss 0.6096 Epoch: 35   Global Step: 13550   Required: 0 hours
+Training: 2025-05-28 07:19:03,237-Speed 371.14 samples/sec   Loss 0.5835 Epoch: 35   Global Step: 13600   Required: 0 hours
+Training: 2025-05-28 07:19:20,488-Speed 371.00 samples/sec   Loss 0.6269 Epoch: 35   Global Step: 13650   Required: 0 hours
+Training: 2025-05-28 07:19:37,739-Speed 370.99 samples/sec   Loss 0.6009 Epoch: 35   Global Step: 13700   Required: 0 hours
+Training: 2025-05-28 07:19:54,991-Speed 370.97 samples/sec   Loss 0.6101 Epoch: 35   Global Step: 13750   Required: 0 hours
+Training: 2025-05-28 07:20:12,242-Speed 371.01 samples/sec   Loss 0.5666 Epoch: 35   Global Step: 13800   Required: 0 hours
+Training: 2025-05-28 07:20:29,496-Speed 370.94 samples/sec   Loss 0.5929 Epoch: 35   Global Step: 13850   Required: 0 hours
+Training: 2025-05-28 07:20:57,153-[lfw][13860]XNorm: 20.801731
+Training: 2025-05-28 07:20:57,153-[lfw][13860]Accuracy-Flip: 0.92300+-0.01426
+Training: 2025-05-28 07:20:57,153-[lfw][13860]Accuracy-Highest: 0.93117
+Training: 2025-05-28 07:21:25,325-[cfp_fp][13860]XNorm: 18.430191
+Training: 2025-05-28 07:21:25,325-[cfp_fp][13860]Accuracy-Flip: 0.73371+-0.01543
+Training: 2025-05-28 07:21:25,325-[cfp_fp][13860]Accuracy-Highest: 0.74157
+Training: 2025-05-28 07:21:49,521-[agedb_30][13860]XNorm: 18.901973
+Training: 2025-05-28 07:21:49,521-[agedb_30][13860]Accuracy-Flip: 0.74450+-0.02717
+Training: 2025-05-28 07:21:49,521-[agedb_30][13860]Accuracy-Highest: 0.75367
+Training: 2025-05-28 07:22:13,799-[calfw][13860]XNorm: 20.881407
+Training: 2025-05-28 07:22:13,799-[calfw][13860]Accuracy-Flip: 0.80150+-0.01562
+Training: 2025-05-28 07:22:13,799-[calfw][13860]Accuracy-Highest: 0.81167
+Training: 2025-05-28 07:22:38,068-[cplfw][13860]XNorm: 18.673472
+Training: 2025-05-28 07:22:38,068-[cplfw][13860]Accuracy-Flip: 0.69733+-0.01562
+Training: 2025-05-28 07:22:38,068-[cplfw][13860]Accuracy-Highest: 0.70267
+Training: 2025-05-28 07:22:52,044-Speed 44.90 samples/sec   Loss 0.5918 Epoch: 36   Global Step: 13900   Required: 0 hours
+Training: 2025-05-28 07:23:09,286-Speed 371.21 samples/sec   Loss 0.5563 Epoch: 36   Global Step: 13950   Required: 0 hours
+Training: 2025-05-28 07:23:26,535-Speed 371.02 samples/sec   Loss 0.5815 Epoch: 36   Global Step: 14000   Required: 0 hours
+Training: 2025-05-28 07:23:43,781-Speed 371.11 samples/sec   Loss 0.6074 Epoch: 36   Global Step: 14050   Required: 0 hours
+Training: 2025-05-28 07:24:01,028-Speed 371.07 samples/sec   Loss 0.6511 Epoch: 36   Global Step: 14100   Required: 0 hours
+Training: 2025-05-28 07:24:18,281-Speed 370.96 samples/sec   Loss 0.5907 Epoch: 36   Global Step: 14150   Required: 0 hours
+Training: 2025-05-28 07:24:35,533-Speed 370.98 samples/sec   Loss 0.5799 Epoch: 36   Global Step: 14200   Required: 0 hours
+Training: 2025-05-28 07:25:15,261-[lfw][14245]XNorm: 20.855747
+Training: 2025-05-28 07:25:15,261-[lfw][14245]Accuracy-Flip: 0.92233+-0.01461
+Training: 2025-05-28 07:25:15,261-[lfw][14245]Accuracy-Highest: 0.93117
+Training: 2025-05-28 07:25:43,441-[cfp_fp][14245]XNorm: 18.467119
+Training: 2025-05-28 07:25:43,441-[cfp_fp][14245]Accuracy-Flip: 0.72871+-0.01724
+Training: 2025-05-28 07:25:43,441-[cfp_fp][14245]Accuracy-Highest: 0.74157
+Training: 2025-05-28 07:26:07,632-[agedb_30][14245]XNorm: 18.927275
+Training: 2025-05-28 07:26:07,632-[agedb_30][14245]Accuracy-Flip: 0.74533+-0.02626
+Training: 2025-05-28 07:26:07,632-[agedb_30][14245]Accuracy-Highest: 0.75367
+Training: 2025-05-28 07:26:31,902-[calfw][14245]XNorm: 20.922881
+Training: 2025-05-28 07:26:31,903-[calfw][14245]Accuracy-Flip: 0.80517+-0.01699
+Training: 2025-05-28 07:26:31,903-[calfw][14245]Accuracy-Highest: 0.81167
+Training: 2025-05-28 07:26:56,166-[cplfw][14245]XNorm: 18.721940
+Training: 2025-05-28 07:26:56,166-[cplfw][14245]Accuracy-Flip: 0.69733+-0.01590
+Training: 2025-05-28 07:26:56,166-[cplfw][14245]Accuracy-Highest: 0.70267
+Training: 2025-05-28 07:26:58,075-Speed 44.90 samples/sec   Loss 0.6090 Epoch: 37   Global Step: 14250   Required: 0 hours
+Training: 2025-05-28 07:27:15,308-Speed 371.39 samples/sec   Loss 0.5812 Epoch: 37   Global Step: 14300   Required: 0 hours
+Training: 2025-05-28 07:27:32,549-Speed 371.19 samples/sec   Loss 0.5800 Epoch: 37   Global Step: 14350   Required: 0 hours
+Training: 2025-05-28 07:27:49,797-Speed 371.08 samples/sec   Loss 0.6175 Epoch: 37   Global Step: 14400   Required: 0 hours
+Training: 2025-05-28 07:28:07,047-Speed 371.00 samples/sec   Loss 0.5558 Epoch: 37   Global Step: 14450   Required: 0 hours
+Training: 2025-05-28 07:28:24,300-Speed 370.96 samples/sec   Loss 0.6115 Epoch: 37   Global Step: 14500   Required: 0 hours
+Training: 2025-05-28 07:28:41,555-Speed 370.91 samples/sec   Loss 0.5754 Epoch: 37   Global Step: 14550   Required: 0 hours
+Training: 2025-05-28 07:28:58,810-Speed 370.93 samples/sec   Loss 0.5689 Epoch: 37   Global Step: 14600   Required: 0 hours
+Training: 2025-05-28 07:29:33,360-[lfw][14630]XNorm: 20.632940
+Training: 2025-05-28 07:29:33,360-[lfw][14630]Accuracy-Flip: 0.92350+-0.01512
+Training: 2025-05-28 07:29:33,360-[lfw][14630]Accuracy-Highest: 0.93117
+Training: 2025-05-28 07:30:01,597-[cfp_fp][14630]XNorm: 18.295810
+Training: 2025-05-28 07:30:01,598-[cfp_fp][14630]Accuracy-Flip: 0.73243+-0.01532
+Training: 2025-05-28 07:30:01,598-[cfp_fp][14630]Accuracy-Highest: 0.74157
+Training: 2025-05-28 07:30:25,799-[agedb_30][14630]XNorm: 18.747989
+Training: 2025-05-28 07:30:25,799-[agedb_30][14630]Accuracy-Flip: 0.74133+-0.02655
+Training: 2025-05-28 07:30:25,800-[agedb_30][14630]Accuracy-Highest: 0.75367
+Training: 2025-05-28 07:30:50,094-[calfw][14630]XNorm: 20.720587
+Training: 2025-05-28 07:30:50,094-[calfw][14630]Accuracy-Flip: 0.80200+-0.01406
+Training: 2025-05-28 07:30:50,094-[calfw][14630]Accuracy-Highest: 0.81167
+Training: 2025-05-28 07:31:14,377-[cplfw][14630]XNorm: 18.529676
+Training: 2025-05-28 07:31:14,378-[cplfw][14630]Accuracy-Flip: 0.69600+-0.01546
+Training: 2025-05-28 07:31:14,378-[cplfw][14630]Accuracy-Highest: 0.70267
+Training: 2025-05-28 07:31:21,424-Speed 44.88 samples/sec   Loss 0.5893 Epoch: 38   Global Step: 14650   Required: 0 hours
+Training: 2025-05-28 07:31:38,655-Speed 371.42 samples/sec   Loss 0.5615 Epoch: 38   Global Step: 14700   Required: 0 hours
+Training: 2025-05-28 07:31:55,894-Speed 371.26 samples/sec   Loss 0.5970 Epoch: 38   Global Step: 14750   Required: 0 hours
+Training: 2025-05-28 07:32:13,136-Speed 371.20 samples/sec   Loss 0.5875 Epoch: 38   Global Step: 14800   Required: 0 hours
+Training: 2025-05-28 07:32:30,371-Speed 371.33 samples/sec   Loss 0.6238 Epoch: 38   Global Step: 14850   Required: 0 hours
+Training: 2025-05-28 07:32:47,613-Speed 371.20 samples/sec   Loss 0.5868 Epoch: 38   Global Step: 14900   Required: 0 hours
+Training: 2025-05-28 07:33:04,850-Speed 371.29 samples/sec   Loss 0.5639 Epoch: 38   Global Step: 14950   Required: 0 hours
+Training: 2025-05-28 07:33:22,098-Speed 371.07 samples/sec   Loss 0.5780 Epoch: 38   Global Step: 15000   Required: 0 hours
+Training: 2025-05-28 07:33:51,454-[lfw][15015]XNorm: 20.800969
+Training: 2025-05-28 07:33:51,454-[lfw][15015]Accuracy-Flip: 0.92350+-0.01473
+Training: 2025-05-28 07:33:51,454-[lfw][15015]Accuracy-Highest: 0.93117
+Training: 2025-05-28 07:34:19,676-[cfp_fp][15015]XNorm: 18.435133
+Training: 2025-05-28 07:34:19,676-[cfp_fp][15015]Accuracy-Flip: 0.73429+-0.01667
+Training: 2025-05-28 07:34:19,676-[cfp_fp][15015]Accuracy-Highest: 0.74157
+Training: 2025-05-28 07:34:43,860-[agedb_30][15015]XNorm: 18.882992
+Training: 2025-05-28 07:34:43,860-[agedb_30][15015]Accuracy-Flip: 0.74450+-0.02500
+Training: 2025-05-28 07:34:43,860-[agedb_30][15015]Accuracy-Highest: 0.75367
+Training: 2025-05-28 07:35:08,134-[calfw][15015]XNorm: 20.882169
+Training: 2025-05-28 07:35:08,134-[calfw][15015]Accuracy-Flip: 0.80350+-0.01618
+Training: 2025-05-28 07:35:08,134-[calfw][15015]Accuracy-Highest: 0.81167
+Training: 2025-05-28 07:35:32,390-[cplfw][15015]XNorm: 18.677188
+Training: 2025-05-28 07:35:32,390-[cplfw][15015]Accuracy-Flip: 0.69383+-0.01524
+Training: 2025-05-28 07:35:32,390-[cplfw][15015]Accuracy-Highest: 0.70267
+Training: 2025-05-28 07:35:44,603-Speed 44.91 samples/sec   Loss 0.6065 Epoch: 39   Global Step: 15050   Required: 0 hours
+Training: 2025-05-28 07:36:01,845-Speed 371.20 samples/sec   Loss 0.6162 Epoch: 39   Global Step: 15100   Required: 0 hours
+Training: 2025-05-28 07:36:19,083-Speed 371.27 samples/sec   Loss 0.5641 Epoch: 39   Global Step: 15150   Required: 0 hours
+Training: 2025-05-28 07:36:36,319-Speed 371.32 samples/sec   Loss 0.5696 Epoch: 39   Global Step: 15200   Required: 0 hours
+Training: 2025-05-28 07:36:53,554-Speed 371.33 samples/sec   Loss 0.6006 Epoch: 39   Global Step: 15250   Required: 0 hours
+Training: 2025-05-28 07:37:10,800-Speed 371.10 samples/sec   Loss 0.5666 Epoch: 39   Global Step: 15300   Required: 0 hours
+Training: 2025-05-28 07:37:28,044-Speed 371.16 samples/sec   Loss 0.6183 Epoch: 39   Global Step: 15350   Required: 0 hours
+Training: 2025-05-28 07:37:45,283-Speed 371.26 samples/sec   Loss 0.5571 Epoch: 39   Global Step: 15400   Required: 0 hours
+Training: 2025-05-28 07:38:09,474-[lfw][15400]XNorm: 20.791482
+Training: 2025-05-28 07:38:09,474-[lfw][15400]Accuracy-Flip: 0.92050+-0.01414
+Training: 2025-05-28 07:38:09,474-[lfw][15400]Accuracy-Highest: 0.93117
+Training: 2025-05-28 07:38:37,671-[cfp_fp][15400]XNorm: 18.416872
+Training: 2025-05-28 07:38:37,671-[cfp_fp][15400]Accuracy-Flip: 0.73386+-0.01592
+Training: 2025-05-28 07:38:37,671-[cfp_fp][15400]Accuracy-Highest: 0.74157
+Training: 2025-05-28 07:39:01,853-[agedb_30][15400]XNorm: 18.901284
+Training: 2025-05-28 07:39:01,853-[agedb_30][15400]Accuracy-Flip: 0.74400+-0.02522
+Training: 2025-05-28 07:39:01,853-[agedb_30][15400]Accuracy-Highest: 0.75367
+Training: 2025-05-28 07:39:26,148-[calfw][15400]XNorm: 20.867905
+Training: 2025-05-28 07:39:26,148-[calfw][15400]Accuracy-Flip: 0.80517+-0.01603
+Training: 2025-05-28 07:39:26,148-[calfw][15400]Accuracy-Highest: 0.81167
+Training: 2025-05-28 07:39:50,420-[cplfw][15400]XNorm: 18.668275
+Training: 2025-05-28 07:39:50,420-[cplfw][15400]Accuracy-Flip: 0.69483+-0.01749
+Training: 2025-05-28 07:39:50,420-[cplfw][15400]Accuracy-Highest: 0.70267
