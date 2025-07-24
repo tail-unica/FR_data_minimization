@@ -40,14 +40,14 @@ elif config.loss == "ArcFace":
     config.m = 0.5
 
 config.auth_dict = {
-    "WF": "/data/Authentic/casia_training",
+    "WF": "/data/Authentic/casia_training/images",
     "M2-S": "/data/Authentic/faces_emore_10k/images",
 }
 
 config.synt_dict = {
     "GC": "/data/Synthetic/GAN_Control_class_images/images",
     "DC": "/data/Synthetic/dcface_0.5m_oversample_xid/images",
-    "IDF": "/data/Synthetic/Idifface"
+    "IDF": "/data/Synthetic/Idifface/images",
 }
 
 config.synthetic_root = config.synt_dict[config.synt_dataset]
